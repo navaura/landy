@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - NAVAURA ARCTIQ</title>
+  <meta name="description" content="Learn about Navaura Arctiq - Next-generation automation and AI tools designed for modern businesses and ambitious founders.">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="about navaura, about us, company profile, tech team, automation company India">
+  <meta name="author" content="NAVAURA ARCTIQ">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://navaura.in/company/about.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://navaura.in/company/about.html">
+  <meta property="og:title" content="About Us - NAVAURA ARCTIQ">
+  <meta property="og:description" content="Learn about Navaura Arctiq - Next-generation automation and AI tools designed for modern businesses and ambitious founders.">
+  <meta property="og:image" content="https://navaura.in/assets/images/about-og.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="About Us - NAVAURA ARCTIQ">
+  <meta name="twitter:description" content="Learn about Navaura Arctiq - Next-generation automation and AI tools.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- Professional Tech Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="/chatui.js"></script>
+  
+  <style>
+    :root {
+      --bg: #030303;
+      --surface: #0a0a0a;
+      --fg: #ffffff;
+      --dim: rgba(255, 255, 255, 0.4);
+      --border: rgba(255, 255, 255, 0.1);
+      --font-main: 'Manrope', sans-serif;
+      --font-mono: 'Space Mono', monospace;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-main);
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- BACKGROUND GRID --- */
+    .bg-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 100px 100px;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* --- TYPOGRAPHY --- */
+    h1, h2, h3 {
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .mono-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--dim);
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 3rem;
+      border-left: 2px solid var(--fg);
+      padding-left: 2rem;
+    }
+
+    /* --- LAYOUT UTILS --- */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 5%;
+      position: relative;
+      z-index: 2;
+    }
+
+    section {
+      padding: 8rem 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* --- HERO --- */
+    .page-hero {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 10vh;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 0.95;
+      margin-bottom: 2rem;
+    }
+
+    .page-hero p {
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      color: var(--dim);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* --- STORY SECTION --- */
+    .story-section {
+      padding: 8rem 0;
+    }
+
+    .story-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .story-content p {
+      font-size: 1.1rem;
+      color: var(--dim);
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+
+    /* --- GRID LAYOUT --- */
+    .grid-layout {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      border-top: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+      margin-top: 4rem;
+    }
+
+    .grid-cell {
+      padding: 3rem;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      transition: background 0.3s ease;
+      background: rgba(3, 3, 3, 0.4);
+    }
+
+    .grid-cell:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .grid-cell h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .grid-cell p {
+      color: var(--dim);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .grid-cell::before {
+      content: '+';
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: var(--border);
+      font-family: var(--font-mono);
+    }
+
+    .span-12 { grid-column: span 12; }
+    .span-8  { grid-column: span 8; }
+    .span-6  { grid-column: span 6; }
+    .span-4  { grid-column: span 4; }
+    
+    /* --- TEAM SECTION --- */
+    .team-section {
+      background: var(--surface);
+      padding: 8rem 0;
+    }
+
+    /* Founder Section */
+    .founder-section {
+      margin-top: 4rem;
+      margin-bottom: 6rem;
+    }
+
+    .founder-card {
+      display: grid;
+      grid-template-columns: 500px 1fr;
+      gap: 5rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 4rem;
+      position: relative;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .founder-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .founder-image-wrapper {
+      position: relative;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      height: 600px;
+    }
+
+    .founder-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.4s ease, transform 0.4s ease;
+    }
+
+    .founder-card:hover .founder-image {
+      filter: grayscale(0%);
+      transform: scale(1.05);
+    }
+
+    .founder-image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 60%, rgba(3, 3, 3, 0.8) 100%);
+      pointer-events: none;
+    }
+
+    .founder-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .founder-content h3 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .founder-content .team-role {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: var(--dim);
+      margin-bottom: 2rem;
+      letter-spacing: 0.05em;
+    }
+
+    .founder-content p {
+      font-size: 1rem;
+      color: var(--dim);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .founder-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Team Members Section */
+    .team-members-section {
+      margin-top: 4rem;
+    }
+
+    .team-members-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 400px));
+      gap: 2rem;
+      margin-top: 2rem;
+      justify-content: start;
+    }
+
+    .member-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+    }
+
+    .member-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .member-image-wrapper {
+      position: relative;
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      background: var(--surface);
+      height: 300px;
+    }
+
+    .member-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.4s ease, transform 0.4s ease;
+    }
+
+    .member-card:hover .member-image {
+      filter: grayscale(0%);
+      transform: scale(1.05);
+    }
+
+    .member-image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 50%, rgba(3, 3, 3, 0.9) 100%);
+      pointer-events: none;
+    }
+
+    .member-content {
+      padding: 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .member-content h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .member-content .team-role {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      color: var(--dim);
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .member-content p {
+      font-size: 0.9rem;
+      color: var(--dim);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    /* --- VACANCY CARD --- */
+    .vacancy-card {
+      border: 2px dashed var(--border);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .vacancy-card:hover {
+      border-color: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .vacancy-image-wrapper {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+      background: var(--surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .vacancy-icon {
+      font-size: 5rem;
+      color: var(--border);
+      font-family: var(--font-mono);
+      font-weight: 200;
+      transition: all 0.3s ease;
+    }
+
+    .vacancy-card:hover .vacancy-icon {
+      color: var(--fg);
+      transform: rotate(90deg);
+    }
+
+    .vacancy-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: var(--fg);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .vacancy-link:hover {
+      background: var(--fg);
+      color: var(--bg);
+      border-color: var(--fg);
+    }
+
+    /* --- JOB APPLICATION MODAL --- */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 10000;
+      align-items: center;
+      justify-content: center;
+      overflow-y: auto;
+      padding: 2rem;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      max-width: 600px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      animation: modalSlideIn 0.3s ease;
+    }
+
+    @keyframes modalSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .modal-header {
+      padding: 2rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--surface);
+    }
+
+    .modal-header h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      color: var(--fg);
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease;
+    }
+
+    .modal-close:hover {
+      transform: rotate(90deg);
+    }
+
+    .application-form {
+      padding: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--dim);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--fg);
+      padding: 0.75rem;
+      font-family: var(--font-main);
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--fg);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: var(--fg);
+      color: var(--bg);
+      border: none;
+      padding: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .submit-btn:hover:not(:disabled) {
+      background: var(--dim);
+      transform: translateY(-2px);
+    }
+
+    .submit-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .form-status {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+
+    .success-message {
+      background: rgba(0, 255, 136, 0.1);
+      border: 1px solid rgba(0, 255, 136, 0.3);
+      color: #00ff88;
+      padding: 1rem;
+    }
+
+    .error-message {
+      background: rgba(255, 0, 68, 0.1);
+      border: 1px solid rgba(255, 0, 68, 0.3);
+      color: #ff0044;
+      padding: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .modal {
+        padding: 1rem;
+      }
+
+      .modal-content {
+        max-height: 95vh;
+      }
+
+      .modal-header,
+      .application-form {
+        padding: 1.5rem;
+      }
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      margin-top: 4rem;
+    }
+
+    .team-card {
+      background: var(--bg);
+      padding: 3rem 2rem;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
+
+    .team-card:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .team-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .team-role {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      color: var(--dim);
+      margin-bottom: 1rem;
+    }
+
+    .team-card p {
+      font-size: 0.9rem;
+      color: var(--dim);
+    }
+
+
+    /* --- VALUES SECTION --- */
+    .values-section {
+      padding: 8rem 0;
+    }
+
+    /* --- ANIMATIONS --- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 900px) {
+      .grid-cell { grid-column: span 12 !important; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      
+      .founder-card {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 3rem;
+      }
+      
+      .founder-image-wrapper {
+        height: 400px;
+      }
+      
+      .team-members-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+      
+      .member-image-wrapper {
+        height: 280px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .team-grid { grid-template-columns: 1fr; }
+      
+      .founder-card {
+        padding: 2rem;
+      }
+      
+      .founder-image-wrapper {
+        height: 350px;
+      }
+      
+      .founder-content h3 {
+        font-size: 2rem;
+      }
+      
+      .member-content {
+        padding: 1.5rem;
+      }
+      
+      .member-image-wrapper {
+        height: 250px;
+      }
+      
+      .team-members-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .vacancy-image-wrapper,
+.vacancy-icon {
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Background Grid -->
+  <div class="bg-grid"></div>
+
+  <!-- Navigation Placeholder -->
+  <div id="navigation-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="reveal">
+<span class="mono-label">About // Navaura Arctiq</span>
+<h1>ENGINEERING<br>INEVITABILITY<br>INTO SYSTEMS</h1>
+<p>
+Navaura Arctiq designs automation-first digital infrastructure for businesses that refuse to stay manual.
+We don’t chase trends — we replace friction.
+</p>
+     </div>
+    </div>
+  </section>
+
+<<!-- STORY -->
+<section class="story-section">
+  <div class="container">
+    <span class="mono-label">01 // Origin</span>
+    <h2 class="section-title reveal">OUR STORY</h2>
+    
+    <div class="story-content reveal">
+      <p>
+        Navaura Arctiq was built through direct experimentation and real-world problem solving,
+        not through a conventional development path. The focus from the beginning was simple:
+        build systems that work reliably under real conditions, not just in controlled environments.
+      </p>
+      
+      <p>
+        Early work involved automation, scripting, and locally executed AI systems.
+        Over time, this evolved into structured backend architectures, modular applications,
+        and systems capable of handling asynchronous workloads and real-time interactions.
+      </p>
+
+      <p>
+        Today, the focus is on engineering systems that reduce operational complexity,
+        maintain stability under load, and remain adaptable as requirements evolve.
+      </p>
+    </div>
+
+    <div class="grid-layout reveal">
+      <div class="grid-cell span-4">
+        <span class="mono-label">Purpose</span>
+        <h3>Our Mission</h3>
+        <p>
+          To design and deploy systems that replace repetitive work with reliable,
+          scalable automation.
+        </p>
+      </div>
+      
+      <div class="grid-cell span-4">
+        <span class="mono-label">Direction</span>
+        <h3>Our Vision</h3>
+        <p>
+          Systems that operate with consistency and control,
+          enabling growth without unnecessary complexity.
+        </p>
+      </div>
+
+      <div class="grid-cell span-4">
+        <span class="mono-label">Method</span>
+        <h3>Our Approach</h3>
+        <p>
+          Build from first principles. Keep systems modular.
+          Design for stability, not just speed.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WE / TEAM -->
+<section class="team-section">
+  <div class="container">
+    <span class="mono-label">02 // We</span>
+    <h2 class="section-title reveal">THE OPERATORS</h2>
+    <p style="font-size: 1.1rem; color: var(--dim); margin-bottom: 2rem;" class="reveal">
+      A focused engineering unit working on backend systems, real-time architectures,
+      and full-stack execution with an emphasis on control and reliability.
+    </p>
+
+<!-- FOUNDER -->
+<div class="founder-section reveal">
+  <span class="mono-label">Founder</span>
+  <div class="founder-card">
+    <div class="founder-image-wrapper">
+      <img src="/assets/images/founder-photo.jpg" alt="Founder" class="founder-image">
+      <div class="founder-image-overlay"></div>
+    </div>
+    <div class="founder-content">
+      <h3>Subham Mukherjee</h3>
+      <div class="team-role">Founder, Director, CEO & Chief Architect</div>
+
+      <p>
+        Subham Mukherjee is the Founder, Director, and Chief Architect of Navaura Arctiq OPC Private Limited.
+        His professional background began in editing, VFX, CGI, and 3D systems before transitioning into software engineering.
+      </p>
+
+      <p>
+        This transition was entirely self-driven, evolving through continuous hands-on development.
+        Starting from basic scripting, his work progressed into structured backend systems using
+        Flask and FastAPI, integrating task queues with Celery, and designing modular architectures
+        for scalable execution.
+      </p>
+
+      <p>
+        His work includes building local AI pipelines and integrating libraries such as scikit-learn,
+        along with systems that handle asynchronous workloads, background processing,
+        and real-time communication using WebSockets with hybrid polling strategies.
+      </p>
+
+      <p>
+        He has also developed Android-based systems such as the <strong>Last Seen Protocol</strong>,
+        involving foreground services, device-level automation, and persistent background execution.
+        His focus remains on building systems that are modular, observable, and reliable under real-world conditions.
+      </p>
+
+    </div>
+  </div>
+</div>
+<!-- TEAM MEMBERS -->
+<div class="team-members-section reveal">
+  <span class="mono-label">Team</span>
+  <div class="team-members-grid">
+    
+    <div class="member-card">
+      <div class="member-image-wrapper">
+        <img src="/assets/images/team-member-1.jpg" alt="Rakhi Gon" class="member-image">
+        <div class="member-image-overlay"></div>
+      </div>
+      <div class="member-content">
+        <h3>Rakhi Gon</h3>
+        <div class="team-role">Lead Frontend Engineer & UI/UX Designer</div>
+        <p>
+          Leads frontend architecture and user experience strategy at Navaura Arctiq. 
+          Specialized in building high-performance React interfaces, scalable design systems, 
+          and conversion-optimized UI flows. Experienced in full-stack collaboration, REST API integration, 
+          and enterprise-grade application development. Drives product usability, visual consistency, 
+          and frontend performance across all core platforms.
+        </p>
+      </div>
+    </div>
+
+        <!-- VACANCY CARD -->
+<div class="member-card vacancy-card">
+  <div class="vacancy-image-wrapper" onclick="openApplicationModal()" role="button" tabindex="0">
+    <div class="vacancy-icon">+</div>
+  </div>
+  <div class="member-content">
+    <h3>Join Our Team</h3>
+    <div class="team-role">Open Position</div>
+    <p>
+      We're looking for exceptional engineers who believe in automation-first thinking and building systems that scale.
+    </p>
+    <button class="vacancy-link" onclick="openApplicationModal()">View Opportunities →</button>
+  </div>
+</div>
+
+
+        <!-- Add more team members here as needed -->
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- VALUES -->
+<section class="values-section">
+  <div class="container">
+    <span class="mono-label">03 // Principles</span>
+    <h2 class="section-title reveal">OPERATING PRINCIPLES</h2>
+    <p style="font-size: 1.1rem; color: var(--dim); margin-bottom: 2rem;" class="reveal">
+      These are not beliefs. They are constraints under which we operate.
+    </p>
+
+    <div class="grid-layout reveal">
+      <div class="grid-cell span-6">
+        <h3>Automation Over Effort</h3>
+        <p>
+          If a task repeats, it must be automated.
+          Human attention is reserved for judgment, not repetition.
+        </p>
+      </div>
+      
+      <div class="grid-cell span-6">
+        <h3>Clarity Before Speed</h3>
+        <p>
+          Ambiguity creates technical debt.
+          We define boundaries, ownership, and outcomes before execution begins.
+        </p>
+      </div>
+
+      <div class="grid-cell span-6">
+        <h3>Systems Over Features</h3>
+        <p>
+          Features expire. Systems compound.
+          Every build decision is evaluated for long-term operational leverage.
+        </p>
+      </div>
+
+      <div class="grid-cell span-6">
+        <h3>Longevity by Design</h3>
+        <p>
+          We optimize for maintainability and resilience,
+          not short-term delivery theatrics.
+        </p>
+      </div>
+
+      <div class="grid-cell span-6">
+        <h3>Controlled Evolution</h3>
+        <p>
+          Change is inevitable.
+          Systems must adapt without breaking, rewrites, or dependency chaos.
+        </p>
+      </div>
+
+      <div class="grid-cell span-6">
+        <h3>Scalable Control</h3>
+        <p>
+          Growth should increase leverage, not entropy.
+          Systems must scale before teams are forced to.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Job Application Modal -->
+  <div id="applicationModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Apply to Join Navaura Arctiq</h2>
+        <button class="modal-close" onclick="closeApplicationModal()">&times;</button>
+      </div>
+      <form id="applicationForm" class="application-form">
+        <div class="form-group">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" name="fullName" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="position">Desired Position *</label>
+          <select id="position" name="position" required>
+            <option value="">Select a position</option>
+            <option value="backend-engineer">Backend Engineer</option>
+            <option value="frontend-engineer">Frontend Engineer</option>
+            <option value="fullstack-engineer">Fullstack Engineer</option>
+            <option value="devops-engineer">DevOps Engineer</option>
+            <option value="mobile-engineer">Mobile Engineer (Android)</option>
+            <option value="ai-engineer">AI/ML Engineer</option>
+            <option value="system-architect">System Architect</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="experience">Experience Level *</label>
+          <select id="experience" name="experience" required>
+            <option value="">Select experience level</option>
+            <option value="entry">Entry Level (0-2 years)</option>
+            <option value="mid">Mid Level (2-5 years)</option>
+            <option value="senior">Senior (5+ years)</option>
+            <option value="lead">Lead/Principal</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="linkedin">LinkedIn Profile</label>
+          <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+        </div>
+        
+        <div class="form-group">
+          <label for="portfolio">Portfolio/GitHub URL</label>
+          <input type="url" id="portfolio" name="portfolio" placeholder="https://github.com/yourusername">
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Why do you want to join Navaura Arctiq?</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about your interest and what you bring to the team..."></textarea>
+        </div>
+        
+        <div class="form-status" id="formStatus"></div>
+        
+        <button type="submit" class="submit-btn">Submit Application</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Load Components & Scripts -->
+  <script>
+    const API_BASE_URL = 'https://server1001.navaura.in';
+
+    // Modal functions
+    function openApplicationModal() {
+      document.getElementById('applicationModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeApplicationModal() {
+      document.getElementById('applicationModal').classList.remove('active');
+      document.body.style.overflow = '';
+      document.getElementById('applicationForm').reset();
+      document.getElementById('formStatus').innerHTML = '';
+    }
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (e) => {
+      const modal = document.getElementById('applicationModal');
+      if (e.target === modal) {
+        closeApplicationModal();
+      }
+    });
+
+    // Handle form submission
+    document.getElementById('applicationForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const submitBtn = e.target.querySelector('.submit-btn');
+      const statusDiv = document.getElementById('formStatus');
+      
+      // Disable submit button
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+      statusDiv.innerHTML = '';
+      
+      // Get form data
+      const formData = {
+        full_name: document.getElementById('fullName').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        position: document.getElementById('position').value,
+        experience: document.getElementById('experience').value,
+        linkedin: document.getElementById('linkedin').value || null,
+        portfolio: document.getElementById('portfolio').value || null,
+        message: document.getElementById('message').value || null
+      };
+      
+      try {
+        const response = await fetch(`${API_BASE_URL}/apply-job`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+        });
+        
+        const data = await response.json();
+        
+        if (response.ok) {
+          statusDiv.innerHTML = `<div class="success-message">✓ ${data.message}</div>`;
+          setTimeout(() => {
+            closeApplicationModal();
+          }, 3000);
+        } else {
+          statusDiv.innerHTML = `<div class="error-message">✗ ${data.detail || 'Submission failed. Please try again.'}</div>`;
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Submit Application';
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        statusDiv.innerHTML = '<div class="error-message">✗ Network error. Please check your connection and try again.</div>';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Application';
+      }
+    });
+
+    // 1. Reveal Animation Observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      observer.observe(el);
+    });
+
+    // 2. Load Navigation and Initialize Interactions
+    fetch('/nav.html')
+      .then(response => response.text())
+      .then(data => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(data, 'text/html');
+
+        const nav = doc.querySelector('nav');
+        const navOverlay = doc.querySelector('.nav-overlay');
+        const footer = doc.querySelector('footer');
+        const styles = doc.querySelector('style');
+
+        if (styles) document.head.appendChild(styles);
+        if (nav) document.getElementById('navigation-placeholder').appendChild(nav);
+        if (navOverlay) document.getElementById('navigation-placeholder').appendChild(navOverlay);
+        if (footer) document.getElementById('footer-placeholder').appendChild(footer);
+
+        setTimeout(() => {
+          const menuBtn = document.getElementById('menuToggle');
+          const overlay = document.getElementById('navOverlay');
+          const navBar = document.getElementById('mainNav');
+          const navLinks = document.querySelectorAll('.nav-links a, .nav-links button');
+
+          if (menuBtn && overlay) {
+            menuBtn.addEventListener('click', () => {
+              overlay.classList.toggle('active');
+              if (overlay.classList.contains('active')) {
+                menuBtn.textContent = "[ CLOSE ]";
+                document.body.style.overflow = "hidden";
+              } else {
+                menuBtn.textContent = "[ MENU ]";
+                document.body.style.overflow = "";
+              }
+            });
+
+            navLinks.forEach(link => {
+              link.addEventListener('click', () => {
+                overlay.classList.remove('active');
+                menuBtn.textContent = "[ MENU ]";
+                document.body.style.overflow = "";
+              });
+            });
+          }
+
+          window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+              navBar.classList.add('scrolled');
+            } else {
+              navBar.classList.remove('scrolled');
+            }
+          });
+
+        }, 100);
+      })
+      .catch(err => console.error('Error loading components:', err));
+  </script>
+</body>
+</html>

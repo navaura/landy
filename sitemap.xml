@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- ========================================= -->
+  <!-- AUTO-GENERATED / UPDATED: 2026-06-29 -->
+  <!-- ========================================= -->
+
+  <!-- ===== STATIC PAGES ===== -->
+  <url>
+    <loc>https://navaura.in/</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>1</priority>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <url>
+    <loc>https://navaura.in/company/about</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>0.85</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://navaura.in/services</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://navaura.in/apps</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://navaura.in/company/contact</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://navaura.in/company/privacy</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>0.4</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://navaura.in/company/terms</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>0.4</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://navaura.in/cookies</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://navaura.in/system-replacements</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>0.75</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://navaura.in/locations/software-company-kolkata</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://navaura.in/our-services/ai-automation</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>0.98</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://navaura.in/our-services/app-development</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>0.98</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://navaura.in/our-services/backend-api-development</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>0.97</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://navaura.in/our-services/cloud-deployment</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>0.97</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://navaura.in/our-services/custom-software</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>0.98</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://navaura.in/our-services/ecommerce-development</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>0.97</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://navaura.in/our-services/seo-services</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>0.99</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://navaura.in/our-services/ui-ux-design</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>0.96</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://navaura.in/our-services/web-development</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>0.98</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://navaura.in/blog</loc>
+    <lastmod>2026-06-29</lastmod>
+    <priority>0.85</priority>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <!-- No blog posts found -->
+
+</urlset>

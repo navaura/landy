@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Development - NAVAURA ARCTIQ</title>
+  <meta name="description" content="Native and cross-platform mobile app development for iOS and Android.">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="app development, mobile app development India, Android app development, iOS app development, custom mobile apps, automation system development">
+  <meta name="author" content="NAVAURA ARCTIQ">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://navaura.in/our-services/app-development.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://navaura.in/our-services/app-development.html">
+  <meta property="og:title" content="Mobile App Development - NAVAURA ARCTIQ">
+  <meta property="og:description" content="Native and cross-platform mobile app development for iOS and Android.">
+  <meta property="og:image" content="https://navaura.in/assets/images/app-dev-og.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Structured Data: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "App Development",
+    "provider": {
+      "@type": "Organization",
+      "name": "NAVAURA ARCTIQ",
+      "url": "https://navaura.in/"
+    },
+    "areaServed": "IN",
+    "description": "Custom mobile and web app development services for businesses looking to replace manual workflows with software."
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #030303;
+      --surface: #0a0a0a;
+      --fg: #ffffff;
+      --dim: rgba(255, 255, 255, 0.4);
+      --border: rgba(255, 255, 255, 0.1);
+      --font-main: 'Manrope', sans-serif;
+      --font-mono: 'Space Mono', monospace;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-main);
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .bg-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 100px 100px;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 5%;
+      position: relative;
+      z-index: 2;
+    }
+
+    section {
+      padding: 6rem 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      z-index: 1;
+    }
+
+    h1, h2, h3 {
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .mono-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--dim);
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .service-hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      padding-top: 10vh;
+    }
+
+    .service-hero h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 0.95;
+      margin-bottom: 2rem;
+    }
+
+    .service-hero p {
+      font-size: 1.2rem;
+      color: var(--dim);
+      max-width: 700px;
+      line-height: 1.7;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .detail-card {
+      padding: 2rem;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.02);
+      transition: all 0.3s ease;
+    }
+
+    .detail-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .detail-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .detail-card p {
+      color: var(--dim);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .detail-card ul {
+      list-style: none;
+      margin-top: 1.5rem;
+      padding: 0;
+    }
+
+    .detail-card li {
+      padding: 0.6rem 0;
+      color: var(--dim);
+      font-size: 0.9rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .detail-card li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--fg);
+      opacity: 0.3;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .tech-tag {
+      padding: 0.5rem 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 6rem 0;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 3rem;
+      background: var(--fg);
+      color: var(--bg);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      border: 2px solid var(--fg);
+      margin-top: 2rem;
+    }
+
+    .cta-button:hover {
+      background: transparent;
+      color: var(--fg);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      color: var(--dim);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: var(--fg);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  
+  <!-- Navigation Placeholder -->
+  <div id="navigation-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="service-hero">
+    <div class="container">
+      <span class="mono-label">SERVICE / 02</span>
+      <h1>APP DEVELOPMENT</h1>
+      <p>Native and cross-platform mobile applications that deliver exceptional user experiences. Built for performance, scalability, and seamless integration with your business ecosystem.</p>
+      <a href="../services.html" class="back-link">← BACK TO ALL SERVICES</a>
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section>
+    <div class="container">
+      <h2 style="font-size: 2rem; margin-bottom: 3rem;">What We Build</h2>
+      <div class="detail-grid">
+        <div class="detail-card">
+          <h3>Native iOS Apps</h3>
+          <p>Swift and SwiftUI applications optimized for Apple's ecosystem. Leveraging platform-specific features for maximum performance.</p>
+          <ul>
+            <li>iPhone applications</li>
+            <li>iPad optimization</li>
+            <li>Apple Watch integration</li>
+            <li>App Store deployment</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <h3>Native Android Apps</h3>
+          <p>Kotlin-based Android applications that work flawlessly across diverse device configurations and Android versions.</p>
+          <ul>
+            <li>Phone & tablet apps</li>
+            <li>Material Design</li>
+            <li>Play Store optimization</li>
+            <li>Device compatibility</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <h3>Cross-Platform Apps</h3>
+          <p>React Native and Flutter solutions that run on both iOS and Android from a single codebase, reducing development time and cost.</p>
+          <ul>
+            <li>Unified codebase</li>
+            <li>Native performance</li>
+            <li>Faster time-to-market</li>
+            <li>Cost-effective</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section>
+    <div class="container">
+      <h2 style="font-size: 2rem; margin-bottom: 2rem;">Technology Stack</h2>
+      <p style="color: var(--dim); max-width: 800px; margin-bottom: 3rem;">Platform-specific and cross-platform tools chosen based on your app requirements, target audience, and business goals.</p>
+      
+      <div class="tech-stack">
+        <span class="tech-tag">React Native</span>
+        <span class="tech-tag">Flutter</span>
+        <span class="tech-tag">Swift</span>
+        <span class="tech-tag">SwiftUI</span>
+        <span class="tech-tag">Kotlin</span>
+        <span class="tech-tag">Jetpack Compose</span>
+        <span class="tech-tag">Firebase</span>
+        <span class="tech-tag">Redux</span>
+        <span class="tech-tag">REST APIs</span>
+        <span class="tech-tag">GraphQL</span>
+        <span class="tech-tag">Push Notifications</span>
+        <span class="tech-tag">App Analytics</span>
+        <span class="tech-tag">In-App Purchases</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY FEATURES -->
+  <section>
+    <div class="container">
+      <h2 style="font-size: 2rem; margin-bottom: 3rem;">Core Capabilities</h2>
+      <div class="detail-grid">
+        <div class="detail-card">
+          <h3>User Authentication</h3>
+          <p>Secure login systems with social authentication, biometric integration, and multi-factor authentication.</p>
+        </div>
+
+        <div class="detail-card">
+          <h3>Real-time Features</h3>
+          <p>Live updates, chat functionality, and real-time data synchronization using WebSockets and Firebase.</p>
+        </div>
+
+        <div class="detail-card">
+          <h3>Offline Functionality</h3>
+          <p>Apps that work seamlessly offline with local data storage and automatic sync when connection is restored.</p>
+        </div>
+
+        <div class="detail-card">
+          <h3>Payment Integration</h3>
+          <p>Secure payment gateways, in-app purchases, subscription management, and transaction processing.</p>
+        </div>
+
+        <div class="detail-card">
+          <h3>Location Services</h3>
+          <p>GPS integration, geofencing, maps, and location-based features for enhanced user experience.</p>
+        </div>
+
+        <div class="detail-card">
+          <h3>Push Notifications</h3>
+          <p>Targeted push notifications and in-app messaging to keep users engaged and informed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Build Your App</h2>
+      <p style="color: var(--dim); max-width: 600px; margin: 0 auto;">Let's transform your app idea into a powerful mobile experience that users love.</p>
+      <a href="../contact.html" class="cta-button">START YOUR PROJECT</a>
+    </div>
+  </section>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch('/nav.html')
+      .then(response => response.text())
+      .then(data => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(data, 'text/html');
+        
+        const nav = doc.querySelector('nav');
+        const navOverlay = doc.querySelector('.nav-overlay');
+        const footer = doc.querySelector('footer');
+        const styles = doc.querySelector('style');
+        
+        if (styles) document.head.appendChild(styles);
+        if (nav) document.getElementById('navigation-placeholder').appendChild(nav);
+        if (navOverlay) document.getElementById('navigation-placeholder').appendChild(navOverlay);
+        if (footer) document.getElementById('footer-placeholder').appendChild(footer);
+
+        setTimeout(() => {
+          const menuBtn = document.getElementById('menuToggle');
+          const overlay = document.getElementById('navOverlay');
+          const navBar = document.getElementById('mainNav');
+          const navLinks = document.querySelectorAll('.nav-links a, .nav-links button');
+
+          if (menuBtn && overlay) {
+            menuBtn.addEventListener('click', () => {
+              overlay.classList.toggle('active');
+              menuBtn.textContent = overlay.classList.contains('active') ? "[ CLOSE ]" : "[ MENU ]";
+              document.body.style.overflow = overlay.classList.contains('active') ? "hidden" : "";
+            });
+
+            navLinks.forEach(link => {
+              link.addEventListener('click', () => {
+                overlay.classList.remove('active');
+                menuBtn.textContent = "[ MENU ]";
+                document.body.style.overflow = "";
+              });
+            });
+          }
+
+          window.addEventListener('scroll', () => {
+            navBar.classList.toggle('scrolled', window.scrollY > 50);
+          });
+        }, 100);
+      })
+      .catch(err => console.error('Error loading components:', err));
+  </script>
+</body>
+</html>

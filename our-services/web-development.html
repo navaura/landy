@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development - NAVAURA ARCTIQ</title>
+  <meta name="description" content="Custom web development solutions - responsive, scalable, and built for performance.">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="web development, web development India, website design, responsive websites, full stack development, business websites, automation software company India">
+  <meta name="author" content="NAVAURA ARCTIQ">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://navaura.in/our-services/web-development.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://navaura.in/our-services/web-development.html">
+  <meta property="og:title" content="Web Development Services - NAVAURA ARCTIQ">
+  <meta property="og:description" content="Custom web development solutions - responsive, scalable, and built for performance.">
+  <meta property="og:image" content="https://navaura.in/assets/images/web-dev-og.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Structured Data: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Web Development",
+    "provider": {
+      "@type": "Organization",
+      "name": "NAVAURA ARCTIQ",
+      "url": "https://navaura.in/"
+    },
+    "areaServed": "IN",
+    "description": "Full-stack web development services for businesses across India, built for performance and scale."
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #030303;
+      --surface: #0a0a0a;
+      --fg: #ffffff;
+      --dim: rgba(255, 255, 255, 0.4);
+      --border: rgba(255, 255, 255, 0.1);
+      --font-main: 'Manrope', sans-serif;
+      --font-mono: 'Space Mono', monospace;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-main);
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .bg-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 100px 100px;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 5%;
+      position: relative;
+      z-index: 2;
+    }
+
+    section {
+      padding: 6rem 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      z-index: 1;
+    }
+
+    h1, h2, h3 {
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .mono-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--dim);
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .service-hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      padding-top: 10vh;
+    }
+
+    .service-hero h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 0.95;
+      margin-bottom: 2rem;
+    }
+
+    .service-hero p {
+      font-size: 1.2rem;
+      color: var(--dim);
+      max-width: 700px;
+      line-height: 1.7;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .detail-card {
+      padding: 2rem;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.02);
+      transition: all 0.3s ease;
+    }
+
+    .detail-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .detail-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .detail-card p {
+      color: var(--dim);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .detail-card ul {
+      list-style: none;
+      margin-top: 1.5rem;
+      padding: 0;
+    }
+
+    .detail-card li {
+      padding: 0.6rem 0;
+      color: var(--dim);
+      font-size: 0.9rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .detail-card li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--fg);
+      opacity: 0.3;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .tech-tag {
+      padding: 0.5rem 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 6rem 0;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 3rem;
+      background: var(--fg);
+      color: var(--bg);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      border: 2px solid var(--fg);
+      margin-top: 2rem;
+    }
+
+    .cta-button:hover {
+      background: transparent;
+      color: var(--fg);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      color: var(--dim);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: var(--fg);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  
+  <!-- Navigation Placeholder -->
+  <div id="navigation-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="service-hero">
+    <div class="container">
+      <span class="mono-label">SERVICE / 01</span>
+      <h1>WEB DEVELOPMENT</h1>
+      <p>Custom web applications engineered for performance, scalability, and user experience. From landing pages to complex enterprise platforms, we build digital products that work.</p>
+      <a href="../services.html" class="back-link">← BACK TO ALL SERVICES</a>
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section>
+    <div class="container">
+      <h2 style="font-size: 2rem; margin-bottom: 3rem;">What We Build</h2>
+      <div class="detail-grid">
+        <div class="detail-card">
+          <h3>Responsive Websites</h3>
+          <p>Mobile-first, pixel-perfect websites that adapt seamlessly across all devices. Clean code, fast loading times, and intuitive navigation.</p>
+          <ul>
+            <li>Landing pages</li>
+            <li>Corporate websites</li>
+            <li>Portfolio sites</li>
+            <li>Marketing pages</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <h3>Web Applications</h3>
+          <p>Dynamic, interactive web apps with complex functionality. Built with modern frameworks for speed and maintainability.</p>
+          <ul>
+            <li>SaaS platforms</li>
+            <li>Admin dashboards</li>
+            <li>Internal tools</li>
+            <li>Customer portals</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <h3>Progressive Web Apps</h3>
+          <p>App-like experiences that work offline, install on home screens, and deliver native performance through the browser.</p>
+          <ul>
+            <li>Offline functionality</li>
+            <li>Push notifications</li>
+            <li>App-like UX</li>
+            <li>Cross-platform</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section>
+    <div class="container">
+      <h2 style="font-size: 2rem; margin-bottom: 2rem;">Technology Stack</h2>
+      <p style="color: var(--dim); max-width: 800px; margin-bottom: 3rem;">We choose the right tools for your project requirements, focusing on performance, developer experience, and long-term maintainability.</p>
+      
+      <div class="tech-stack">
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">Next.js</span>
+        <span class="tech-tag">Vue.js</span>
+        <span class="tech-tag">TypeScript</span>
+        <span class="tech-tag">Tailwind CSS</span>
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">Express</span>
+        <span class="tech-tag">MongoDB</span>
+        <span class="tech-tag">PostgreSQL</span>
+        <span class="tech-tag">GraphQL</span>
+        <span class="tech-tag">REST APIs</span>
+        <span class="tech-tag">Vercel</span>
+        <span class="tech-tag">AWS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section>
+    <div class="container">
+      <h2 style="font-size: 2rem; margin-bottom: 3rem;">Our Process</h2>
+      <div class="detail-grid">
+        <div class="detail-card">
+          <h3>01 / Discovery</h3>
+          <p>We analyze your requirements, target audience, and business goals to architect the optimal solution.</p>
+        </div>
+
+        <div class="detail-card">
+          <h3>02 / Design & Prototype</h3>
+          <p>Interactive prototypes and UI designs that validate concepts before development begins.</p>
+        </div>
+
+        <div class="detail-card">
+          <h3>03 / Development</h3>
+          <p>Agile development with regular check-ins, transparent progress tracking, and continuous integration.</p>
+        </div>
+
+        <div class="detail-card">
+          <h3>04 / Testing & Launch</h3>
+          <p>Rigorous QA, performance optimization, and smooth deployment to production.</p>
+        </div>
+
+        <div class="detail-card">
+          <h3>05 / Support & Iteration</h3>
+          <p>Post-launch monitoring, bug fixes, and feature enhancements based on real user data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Build?</h2>
+      <p style="color: var(--dim); max-width: 600px; margin: 0 auto;">Let's discuss your web development project and create a solution that drives results.</p>
+      <a href="../contact.html" class="cta-button">START YOUR PROJECT</a>
+    </div>
+  </section>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    // Load Navigation
+    fetch('/nav.html')
+      .then(response => response.text())
+      .then(data => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(data, 'text/html');
+        
+        const nav = doc.querySelector('nav');
+        const navOverlay = doc.querySelector('.nav-overlay');
+        const footer = doc.querySelector('footer');
+        const styles = doc.querySelector('style');
+        
+        if (styles) document.head.appendChild(styles);
+        if (nav) document.getElementById('navigation-placeholder').appendChild(nav);
+        if (navOverlay) document.getElementById('navigation-placeholder').appendChild(navOverlay);
+        if (footer) document.getElementById('footer-placeholder').appendChild(footer);
+
+        setTimeout(() => {
+          const menuBtn = document.getElementById('menuToggle');
+          const overlay = document.getElementById('navOverlay');
+          const navBar = document.getElementById('mainNav');
+          const navLinks = document.querySelectorAll('.nav-links a, .nav-links button');
+
+          if (menuBtn && overlay) {
+            menuBtn.addEventListener('click', () => {
+              overlay.classList.toggle('active');
+              if (overlay.classList.contains('active')) {
+                menuBtn.textContent = "[ CLOSE ]";
+                document.body.style.overflow = "hidden";
+              } else {
+                menuBtn.textContent = "[ MENU ]";
+                document.body.style.overflow = "";
+              }
+            });
+
+            navLinks.forEach(link => {
+              link.addEventListener('click', () => {
+                overlay.classList.remove('active');
+                menuBtn.textContent = "[ MENU ]";
+                document.body.style.overflow = "";
+              });
+            });
+          }
+
+          window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+              navBar.classList.add('scrolled');
+            } else {
+              navBar.classList.remove('scrolled');
+            }
+          });
+        }, 100);
+      })
+      .catch(err => console.error('Error loading components:', err));
+  </script>
+</body>
+</html>

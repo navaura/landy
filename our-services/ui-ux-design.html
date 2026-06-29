@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI/UX Design - NAVAURA ARCTIQ</title>
+  <meta name="description" content="User-centered design that drives engagement and conversion.">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="UI UX design, UI UX design company India, product design, web design, app design, user experience design">
+  <meta name="author" content="NAVAURA ARCTIQ">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://navaura.in/our-services/ui-ux-design.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://navaura.in/our-services/ui-ux-design.html">
+  <meta property="og:title" content="UI/UX Design Services - NAVAURA ARCTIQ">
+  <meta property="og:description" content="User-centered design that drives engagement and conversion.">
+  <meta property="og:image" content="https://navaura.in/assets/images/uiux-og.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Structured Data: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "UI/UX Design",
+    "provider": {
+      "@type": "Organization",
+      "name": "NAVAURA ARCTIQ",
+      "url": "https://navaura.in/"
+    },
+    "areaServed": "IN",
+    "description": "User-centered UI/UX design services for web and mobile products."
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #030303;
+      --surface: #0a0a0a;
+      --fg: #ffffff;
+      --dim: rgba(255, 255, 255, 0.4);
+      --border: rgba(255, 255, 255, 0.1);
+      --font-main: 'Manrope', sans-serif;
+      --font-mono: 'Space Mono', monospace;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-main);
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .bg-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 100px 100px;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 5%;
+      position: relative;
+      z-index: 2;
+    }
+
+    section {
+      padding: 6rem 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      z-index: 1;
+    }
+
+    h1, h2, h3 {
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .mono-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--dim);
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .service-hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      padding-top: 10vh;
+    }
+
+    .service-hero h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 0.95;
+      margin-bottom: 2rem;
+    }
+
+    .service-hero p {
+      font-size: 1.2rem;
+      color: var(--dim);
+      max-width: 700px;
+      line-height: 1.7;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .detail-card {
+      padding: 2rem;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.02);
+      transition: all 0.3s ease;
+    }
+
+    .detail-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .detail-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .detail-card p {
+      color: var(--dim);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .detail-card ul {
+      list-style: none;
+      margin-top: 1.5rem;
+      padding: 0;
+    }
+
+    .detail-card li {
+      padding: 0.6rem 0;
+      color: var(--dim);
+      font-size: 0.9rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .detail-card li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--fg);
+      opacity: 0.3;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .tech-tag {
+      padding: 0.5rem 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 6rem 0;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 3rem;
+      background: var(--fg);
+      color: var(--bg);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      border: 2px solid var(--fg);
+      margin-top: 2rem;
+    }
+
+    .cta-button:hover {
+      background: transparent;
+      color: var(--fg);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      color: var(--dim);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: var(--fg);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  
+  <div id="navigation-placeholder"></div>
+
+  <section class="service-hero">
+    <div class="container">
+      <span class="mono-label">SERVICE / 03</span>
+      <h1>UI/UX DESIGN</h1>
+      <p>User-centered design that converts visitors into customers. Beautiful interfaces backed by research, testing, and data-driven iteration.</p>
+      <a href="../services.html" class="back-link">← BACK TO ALL SERVICES</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 style="font-size: 2rem; margin-bottom: 3rem;">Design Services</h2>
+      <div class="detail-grid">
+        <div class="detail-card">
+          <h3>User Research</h3>
+          <p>Understanding your users through interviews, surveys, and behavioral analysis to inform design decisions.</p>
+          <ul>
+            <li>User interviews</li>
+            <li>Persona development</li>
+            <li>Journey mapping</li>
+            <li>Competitive analysis</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <h3>Interface Design</h3>
+          <p>Pixel-perfect visual designs that align with your brand and create memorable user experiences.</p>
+          <ul>
+            <li>Wireframing</li>
+            <li>High-fidelity mockups</li>
+            <li>Design systems</li>
+            <li>Responsive layouts</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <h3>Prototyping</h3>
+          <p>Interactive prototypes that validate concepts and user flows before development begins.</p>
+          <ul>
+            <li>Clickable prototypes</li>
+            <li>User flow testing</li>
+            <li>Micro-interactions</li>
+            <li>Animation design</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 style="font-size: 2rem; margin-bottom: 2rem;">Design Tools</h2>
+      <p style="color: var(--dim); max-width: 800px; margin-bottom: 3rem;">Industry-standard tools for creating, prototyping, and collaborating on design projects.</p>
+      
+      <div class="tech-stack">
+        <span class="tech-tag">Figma</span>
+        <span class="tech-tag">Adobe XD</span>
+        <span class="tech-tag">Sketch</span>
+        <span class="tech-tag">Adobe Creative Suite</span>
+        <span class="tech-tag">Principle</span>
+        <span class="tech-tag">Framer</span>
+        <span class="tech-tag">InVision</span>
+        <span class="tech-tag">Miro</span>
+        <span class="tech-tag">UsabilityHub</span>
+        <span class="tech-tag">Hotjar</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 style="font-size: 2rem; margin-bottom: 3rem;">Our Approach</h2>
+      <div class="detail-grid">
+        <div class="detail-card">
+          <h3>01 / Research</h3>
+          <p>Deep dive into user needs, business goals, and market landscape to establish design direction.</p>
+        </div>
+
+        <div class="detail-card">
+          <h3>02 / Ideation</h3>
+          <p>Collaborative brainstorming and sketching to explore multiple solutions and approaches.</p>
+        </div>
+
+        <div class="detail-card">
+          <h3>03 / Design</h3>
+          <p>Creating high-fidelity designs with attention to detail, accessibility, and brand consistency.</p>
+        </div>
+
+        <div class="detail-card">
+          <h3>04 / Test</h3>
+          <p>User testing and feedback collection to validate designs before handoff to development.</p>
+        </div>
+
+        <div class="detail-card">
+          <h3>05 / Iterate</h3>
+          <p>Continuous improvement based on analytics, user feedback, and A/B testing results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Design That Converts</h2>
+      <p style="color: var(--dim); max-width: 600px; margin: 0 auto;">Let's create user experiences that delight your customers and drive business results.</p>
+      <a href="../contact.html" class="cta-button">START YOUR PROJECT</a>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch('/nav.html')
+      .then(response => response.text())
+      .then(data => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(data, 'text/html');
+        
+        const nav = doc.querySelector('nav');
+        const navOverlay = doc.querySelector('.nav-overlay');
+        const footer = doc.querySelector('footer');
+        const styles = doc.querySelector('style');
+        
+        if (styles) document.head.appendChild(styles);
+        if (nav) document.getElementById('navigation-placeholder').appendChild(nav);
+        if (navOverlay) document.getElementById('navigation-placeholder').appendChild(navOverlay);
+        if (footer) document.getElementById('footer-placeholder').appendChild(footer);
+
+        setTimeout(() => {
+          const menuBtn = document.getElementById('menuToggle');
+          const overlay = document.getElementById('navOverlay');
+          const navBar = document.getElementById('mainNav');
+          const navLinks = document.querySelectorAll('.nav-links a, .nav-links button');
+
+          if (menuBtn && overlay) {
+            menuBtn.addEventListener('click', () => {
+              overlay.classList.toggle('active');
+              menuBtn.textContent = overlay.classList.contains('active') ? "[ CLOSE ]" : "[ MENU ]";
+              document.body.style.overflow = overlay.classList.contains('active') ? "hidden" : "";
+            });
+
+            navLinks.forEach(link => {
+              link.addEventListener('click', () => {
+                overlay.classList.remove('active');
+                menuBtn.textContent = "[ MENU ]";
+                document.body.style.overflow = "";
+              });
+            });
+          }
+
+          window.addEventListener('scroll', () => {
+            navBar.classList.toggle('scrolled', window.scrollY > 50);
+          });
+        }, 100);
+      })
+      .catch(err => console.error('Error loading components:', err));
+  </script>
+</body>
+</html>

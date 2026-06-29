@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7059602797340547"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAVAURA™ ARCTIQ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="/chatui.js"></script>
+  
+  <style>
+    /* --- CONFIGURATION --- */
+    :root {
+      --bg: #030303;
+      --fg: #ffffff;
+      --border: rgba(255, 255, 255, 0.12);
+      --dim: rgba(255, 255, 255, 0.4);
+      --highlight: #ffffff;
+      --nav-height: 90px;
+      --nav-height-mobile: 70px;
+    }
+
+    /* --- RESET & GLOBAL --- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      outline: none;
+    }
+
+    html, body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: 'Manrope', sans-serif;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Hide Scrollbar */
+    html { scrollbar-width: none; -ms-overflow-style: none; }
+    html::-webkit-scrollbar { display: none; }
+    body { scrollbar-width: none; -ms-overflow-style: none; }
+    body::-webkit-scrollbar { display: none; }
+
+    a { text-decoration: none; color: inherit; transition: opacity 0.2s; }
+    ul { list-style: none; }
+    button { border: none; background: none; cursor: pointer; font-family: inherit; }
+
+    /* --- NAVIGATION BAR --- */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--nav-height);
+      padding: 0 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10000;
+      transition: background 0.3s ease, border 0.3s ease;
+      background: transparent;
+    }
+
+    nav.scrolled,
+    nav.menu-active {
+      background: rgba(3, 3, 3, 0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-weight: 800;
+      font-size: 1.3rem;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: #fff;
+      mix-blend-mode: difference;
+      transition: opacity 0.3s;
+    }
+    
+    nav.scrolled .nav-logo, 
+    nav.menu-active .nav-logo { 
+      mix-blend-mode: normal; 
+    }
+    
+    .nav-logo:hover { opacity: 0.7; }
+
+    .nav-logo-img {
+      height: 40px;
+      width: auto;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      filter: brightness(0) invert(1);
+    }
+
+    nav.scrolled .nav-logo-img,
+    nav.menu-active .nav-logo-img {
+      filter: brightness(0) invert(1);
+    }
+
+    .nav-logo:hover .nav-logo-img {
+      transform: scale(1.05);
+    }
+
+    .menu-btn {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 0.6rem 1.2rem;
+      letter-spacing: 1px;
+      mix-blend-mode: difference;
+      transition: all 0.3s ease;
+    }
+    
+    nav.scrolled .menu-btn, 
+    nav.menu-active .menu-btn { 
+      mix-blend-mode: normal; 
+    }
+
+    .menu-btn:hover {
+      background: #fff;
+      color: #000 !important;
+      border-color: #fff;
+      mix-blend-mode: normal !important;
+    }
+
+    /* --- OVERLAY MENU --- */
+    .nav-overlay {
+      position: fixed;
+      top: var(--nav-height);
+      left: 0;
+      width: 100%;
+      height: calc(100vh - var(--nav-height));
+      background: var(--bg);
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .nav-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .nav-bg-grid {
+      position: fixed;
+      top: var(--nav-height);
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 100px 100px;
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .nav-content {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 5% 4rem 5%;
+    }
+
+    /* Navigation Sections */
+    .nav-section {
+      margin-bottom: 3rem;
+    }
+
+    .nav-section-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      color: var(--dim);
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links li {
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .nav-links a,
+    .nav-links button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 1.8rem 0;
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      font-weight: 300;
+      color: var(--dim);
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+      transition: color 0.3s ease, padding-left 0.3s ease;
+    }
+
+    /* Subsection styling for nested items */
+    .nav-subsection .nav-links a {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      padding: 1.2rem 0 1.2rem 2rem;
+      font-weight: 400;
+    }
+
+    /* Staggered Animation */
+    .nav-links li > * {
+      transform: translateY(100%);
+      opacity: 0;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+    }
+
+    .nav-overlay.active .nav-links li > * {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Hover State */
+    .nav-links a:hover,
+    .nav-links button:hover,
+    .nav-links a.active {
+      color: #fff;
+      padding-left: 20px;
+    }
+
+    .nav-links .num {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.9rem;
+      opacity: 0.4;
+      transition: opacity 0.3s;
+    }
+    
+    .nav-links a:hover .num { 
+      opacity: 1; 
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      color: #fff;
+      position: relative;
+      z-index: 10;
+      margin-top: auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .footer-col {
+      padding: 4rem 2rem;
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .footer-col:last-child { 
+      border-right: none; 
+    }
+
+    .footer-brand {
+      font-weight: 800;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+    }
+
+    .footer-desc {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--dim);
+      line-height: 1.6;
+      max-width: 320px;
+    }
+
+    .f-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      color: var(--dim);
+      margin-bottom: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    .footer-links a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--dim);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--dim);
+      text-transform: uppercase;
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 1024px) {
+      .footer-grid { 
+        grid-template-columns: 1fr 1fr; 
+      }
+      
+      .footer-col { 
+        border-right: 1px solid var(--border); 
+        border-bottom: 1px solid var(--border); 
+      }
+      
+      .footer-col:nth-child(2) { 
+        border-right: none; 
+      }
+      
+      .footer-col:nth-child(3), 
+      .footer-col:nth-child(4) { 
+        border-bottom: none; 
+      }
+    }
+
+    @media (max-width: 768px) {
+      :root { 
+        --nav-height: var(--nav-height-mobile); 
+      }
+      
+      nav { 
+        height: var(--nav-height); 
+      }
+      
+      .nav-overlay { 
+        top: var(--nav-height); 
+        height: calc(100vh - var(--nav-height)); 
+      }
+      
+      .nav-bg-grid { 
+        top: var(--nav-height); 
+      }
+
+      .nav-logo {
+        font-size: 1rem;
+        gap: 0.5rem;
+      }
+      
+      .nav-logo-img {
+        height: 32px;
+      }
+
+      .footer-grid { 
+        grid-template-columns: 1fr; 
+      }
+      
+      .footer-col { 
+        border-right: none; 
+        padding: 2.5rem 2rem; 
+      }
+      
+      .nav-links a, 
+      .nav-links button { 
+        padding: 1.5rem 0; 
+        font-size: 1.8rem; 
+      }
+      
+      .nav-subsection .nav-links a {
+        font-size: 1rem;
+        padding: 1rem 0 1rem 1.5rem;
+      }
+      
+      .footer-bottom { 
+        flex-direction: column; 
+        gap: 1rem; 
+        text-align: center; 
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="mainNav">
+    <a href="/" class="nav-logo">
+      <img src="https://navaura.in/logow.png" alt="Navaura Arctiq Logo" class="nav-logo-img">
+      <span>NAVAURA™ ARCTIQ</span>
+    </a>
+    <button class="menu-btn" id="menuToggle">[ MENU ]</button>
+  </nav>
+
+  <!-- OVERLAY MENU -->
+  <div class="nav-overlay" id="navOverlay">
+    <div class="nav-bg-grid"></div>
+    <div class="nav-content">
+      
+      <!-- MAIN NAVIGATION -->
+      <div class="nav-section">
+        <div class="nav-section-title">Main Navigation</div>
+        <ul class="nav-links">
+          <li style="transition-delay: 0.0s">
+            <a href="/index">
+              <span class="num">01</span>
+              <span>HOME</span>
+            </a>
+          </li>
+          <li style="transition-delay: 0.05s">
+            <a href="/company/about">
+              <span class="num">02</span>
+              <span>ABOUT</span>
+            </a>
+          </li>
+          <li style="transition-delay: 0.1s">
+            <a href="/services">
+              <span class="num">03</span>
+              <span>SERVICES</span>
+            </a>
+          </li>
+          <li style="transition-delay: 0.15s">
+            <a href="/apps">
+              <span class="num">04</span>
+              <span>APPS</span>
+            </a>
+          </li>
+          <li style="transition-delay: 0.2s">
+            <a href="/blog">
+              <span class="num">05</span>
+              <span>BLOG</span>
+            </a>
+          </li>
+          <li style="transition-delay: 0.25s">
+            <a href="/company/contact">
+              <span class="num">06</span>
+              <span>CONTACT</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- OUR SERVICES -->
+      <div class="nav-section nav-subsection">
+        <div class="nav-section-title">Our Services</div>
+        <ul class="nav-links">
+          <li style="transition-delay: 0.3s">
+            <a href="/our-services/web-development">
+              <span class="num">S1</span>
+              <span>Web Development</span>
+            </a>
+          </li>
+          <li style="transition-delay: 0.32s">
+            <a href="/our-services/app-development">
+              <span class="num">S2</span>
+              <span>App Development</span>
+            </a>
+          </li>
+          <li style="transition-delay: 0.34s">
+            <a href="/our-services/ai-automation">
+              <span class="num">S3</span>
+              <span>AI Automation</span>
+            </a>
+          </li>
+          <li style="transition-delay: 0.36s">
+            <a href="/our-services/custom-software">
+              <span class="num">S4</span>
+              <span>Custom Software</span>
+            </a>
+          </li>
+          <li style="transition-delay: 0.38s">
+            <a href="/our-services/backend-api-development">
+              <span class="num">S5</span>
+              <span>Backend API Development</span>
+            </a>
+          </li>
+          <li style="transition-delay: 0.4s">
+            <a href="/our-services/cloud-deployment">
+              <span class="num">S6</span>
+              <span>Cloud Deployment</span>
+            </a>
+          </li>
+          <li style="transition-delay: 0.42s">
+            <a href="/our-services/ui-ux-design">
+              <span class="num">S7</span>
+              <span>UI/UX Design</span>
+            </a>
+          </li>
+          <li style="transition-delay: 0.44s">
+            <a href="/our-services/ecommerce-development">
+              <span class="num">S8</span>
+              <span>E-commerce Development</span>
+            </a>
+          </li>
+          <li style="transition-delay: 0.46s">
+            <a href="/our-services/seo-services">
+              <span class="num">S9</span>
+              <span>SEO Services</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- COMPANY -->
+      <div class="nav-section nav-subsection">
+        <div class="nav-section-title">Company</div>
+        <ul class="nav-links">
+          <li style="transition-delay: 0.5s">
+            <a href="/company/about">
+              <span class="num">C1</span>
+              <span>About Us</span>
+            </a>
+          </li>
+          <li style="transition-delay: 0.52s">
+            <a href="/company/contact">
+              <span class="num">C2</span>
+              <span>Contact</span>
+            </a>
+          </li>
+          <li style="transition-delay: 0.54s">
+            <a href="/company/privacy">
+              <span class="num">C3</span>
+              <span>Privacy Policy</span>
+            </a>
+          </li>
+          <li style="transition-delay: 0.56s">
+            <a href="/company/terms">
+              <span class="num">C4</span>
+              <span>Terms of Service</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- LOCATIONS -->
+      <div class="nav-section nav-subsection">
+        <div class="nav-section-title">Locations</div>
+        <ul class="nav-links">
+          <li style="transition-delay: 0.6s">
+            <a href="/locations/software-company-kolkata">
+              <span class="num">L1</span>
+              <span>Software Company Kolkata</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ADDITIONAL PAGES -->
+      <div class="nav-section nav-subsection">
+        <div class="nav-section-title">Additional</div>
+        <ul class="nav-links">
+          <li style="transition-delay: 0.65s">
+            <a href="/cookies">
+              <span class="num">A1</span>
+              <span>Cookie Policy</span>
+            </a>
+          </li>
+          <li style="transition-delay: 0.67s">
+            <a href="/system-replacements">
+              <span class="num">A2</span>
+              <span>System Replacements</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ACTION ITEMS -->
+      <div class="nav-section">
+        <div class="nav-section-title">Get in Touch</div>
+        <ul class="nav-links">
+          <li style="transition-delay: 0.7s">
+            <a href="/company/contact">
+              <span class="num">→</span>
+              <span>GET STARTED</span>
+            </a>
+          </li>
+          <li style="transition-delay: 0.75s">
+            <button class="chatui">
+              <span class="num">→</span>
+              <span>CHAT WITH US</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main style="padding-top: var(--nav-height); min-height: 80vh;">
+    <!-- Your page content goes here -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="mainFooter">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">NAVAURA™<br>ARCTIQ</div>
+        <p class="footer-desc">
+          We deploy automation-first systems that operate with minimal human intervention.
+          Manual work is a temporary state.
+        </p>
+      </div>
+      
+      <div class="footer-col">
+        <span class="f-label">Company</span>
+        <div class="footer-links">
+          <a href="/company/about">About Us</a>
+          <a href="/services">Services</a>
+          <a href="/apps">Apps</a>
+          <a href="/blog">Blog</a>
+          <a href="/locations/software-company-kolkata">Software Company Kolkata</a>
+          <a href="/company/contact">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <span class="f-label">Services</span>
+        <div class="footer-links">
+          <a href="/our-services/web-development">Web Development</a>
+          <a href="/our-services/app-development">App Development</a>
+          <a href="/our-services/ai-automation">AI Automation</a>
+          <a href="/our-services/custom-software">Custom Software</a>
+          <a href="/our-services/backend-api-development">Backend API</a>
+          <a href="/our-services/ui-ux-design">UI/UX Design</a>
+          <a href="/our-services/seo-services">SEO Services</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <span class="f-label">Legal</span>
+        <div class="footer-links">
+          <a href="/company/privacy">Privacy Policy</a>
+          <a href="/company/terms">Terms of Service</a>
+          <a href="/cookies">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <span>© 2025 NAVAURA ARCTIQ. All rights reserved.</span>
+      <span>CIN: U62099WB2025OPC275665</span>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Elements
+    const nav = document.getElementById('mainNav');
+    const menuToggle = document.getElementById('menuToggle');
+    const navOverlay = document.getElementById('navOverlay');
+    let isMenuOpen = false;
+
+    // Scroll Handler
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        if (window.scrollY > 20) {
+          nav.classList.add('scrolled');
+        } else if (!isMenuOpen) {
+          nav.classList.remove('scrolled');
+        }
+      }, 10);
+    });
+
+    // Menu Toggle
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    function toggleMenu() {
+      isMenuOpen = !isMenuOpen;
+      
+      if (isMenuOpen) {
+        navOverlay.classList.add('active');
+        nav.classList.add('menu-active');
+        menuToggle.textContent = "[ CLOSE ]";
+        document.body.style.overflow = "hidden";
+      } else {
+        navOverlay.classList.remove('active');
+        nav.classList.remove('menu-active');
+        menuToggle.textContent = "[ MENU ]";
+        document.body.style.overflow = "";
+        
+        if (window.scrollY <= 20) {
+          nav.classList.remove('scrolled');
+        }
+      }
+    }
+
+    // Link Click Logic
+    document.querySelectorAll('.nav-links a, .nav-links button').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (isMenuOpen) toggleMenu();
+
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            const headerOffset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height'));
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth"
+            });
+          }
+        }
+      });
+    });
+
+    // Close on overlay click
+    navOverlay.addEventListener('click', (e) => {
+      if (e.target === navOverlay || e.target.classList.contains('nav-content')) {
+        toggleMenu();
+      }
+    });
+
+    // Set Active Link State
+    function setActiveState() {
+      const currentPath = window.location.pathname;
+      const currentHash = window.location.hash;
+      
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        const href = link.getAttribute('href');
+        link.classList.remove('active');
+
+        if (href) {
+          if (href === currentPath || href === currentHash || (href !== '#' && currentPath.endsWith(href))) {
+            link.classList.add('active');
+          }
+        }
+      });
+    }
+    
+    window.addEventListener('load', setActiveState);
+    window.addEventListener('hashchange', setActiveState);
+  </script>
+
+</body>
+</html>

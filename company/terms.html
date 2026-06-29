@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service - NAVAURA ARCTIQ</title>
+  <meta name="description" content="Terms of Service for Navaura Arctiq - Legal terms and conditions for using our services.">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://navaura.in/company/terms.html">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- Professional Tech Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="/chatui.js"></script>
+  
+  <style>
+    :root {
+      --bg: #030303;
+      --surface: #0a0a0a;
+      --fg: #ffffff;
+      --dim: rgba(255, 255, 255, 0.4);
+      --border: rgba(255, 255, 255, 0.1);
+      --font-main: 'Manrope', sans-serif;
+      --font-mono: 'Space Mono', monospace;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-main);
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- BACKGROUND GRID --- */
+    .bg-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 100px 100px;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* --- LAYOUT --- */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 5%;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* --- HERO --- */
+    .page-hero {
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 10vh;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(3rem, 7vw, 5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 0.95;
+    }
+
+    /* --- LEGAL CONTENT --- */
+    .legal-content {
+      padding: 8rem 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .mono-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--dim);
+      display: block;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .legal-content h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 4rem 0 1.5rem 0;
+      letter-spacing: -0.02em;
+      border-left: 2px solid var(--fg);
+      padding-left: 1.5rem;
+    }
+
+    .legal-content h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 2.5rem 0 1rem 0;
+      color: var(--fg);
+    }
+
+    .legal-content p {
+      font-size: 1rem;
+      color: var(--dim);
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+
+    .legal-content ul {
+      margin: 1.5rem 0 1.5rem 2rem;
+      color: var(--dim);
+      line-height: 1.8;
+    }
+
+    .legal-content li {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    .legal-content strong {
+      color: var(--fg);
+      font-weight: 600;
+    }
+
+    .contact-box {
+      padding: 2.5rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      margin: 4rem 0;
+    }
+
+    .contact-box h3 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-box p {
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-box a {
+      color: var(--fg);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: border-color 0.3s ease;
+    }
+
+    .contact-box a:hover {
+      border-color: var(--fg);
+    }
+
+    .footer-note {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.95rem;
+      color: var(--dim);
+    }
+
+    /* --- ANIMATIONS --- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Grid -->
+  <div class="bg-grid"></div>
+
+  <!-- Navigation Placeholder -->
+  <div id="navigation-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="reveal">
+        <h1>TERMS OF<br>SERVICE</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEGAL CONTENT -->
+  <section class="legal-content">
+    <div class="container">
+      <p class="mono-label reveal"><strong>LAST UPDATED:</strong> JANUARY 1, 2026</p>
+
+      <div class="reveal">
+        <p>Welcome to Navaura Arctiq. These Terms of Service ("Terms") govern your use of our website and services. By accessing or using our services, you agree to be bound by these Terms. If you do not agree with any part of these Terms, you may not use our services.</p>
+      </div>
+
+      <div class="reveal">
+        <h2>1. Definitions</h2>
+        <ul>
+          <li><strong>"Company," "we," "us," or "our"</strong> refers to Navaura Arctiq (CIN: U62099WB2025OPC275665)</li>
+          <li><strong>"Client," "you," or "your"</strong> refers to the individual or entity using our services</li>
+          <li><strong>"Services"</strong> refers to all software development, consulting, and related services provided by us</li>
+          <li><strong>"Website"</strong> refers to navaura.in and all associated subdomains</li>
+          <li><strong>"Deliverables"</strong> refers to the work products, code, designs, and documentation provided as part of our services</li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <h2>2. Service Agreement</h2>
+        <h3>2.1 Engagement</h3>
+        <p>When you engage our services, you agree to:</p>
+        <ul>
+          <li>Provide accurate and complete information</li>
+          <li>Cooperate with us in a timely manner</li>
+          <li>Provide necessary access, materials, and feedback</li>
+          <li>Pay all fees as outlined in your service agreement</li>
+        </ul>
+
+        <h3>2.2 Service Scope</h3>
+        <p>The specific scope of services will be outlined in a separate Statement of Work (SOW) or Service Agreement. Any work outside the agreed scope may result in additional charges.</p>
+      </div>
+
+      <div class="reveal">
+        <h2>3. Payment Terms</h2>
+        <h3>3.1 Fees</h3>
+        <p>All fees are specified in the Service Agreement or quote provided to you. Unless otherwise stated, fees are quoted in Indian Rupees (INR).</p>
+
+        <h3>3.2 Payment Schedule</h3>
+        <p>Standard payment terms are:</p>
+        <ul>
+          <li>30% deposit to commence work</li>
+          <li>40% upon mid-project milestone</li>
+          <li>30% upon project completion</li>
+        </ul>
+        <p>Custom payment schedules may be arranged for larger projects.</p>
+
+        <h3>3.3 Late Payments</h3>
+        <p>Payments not received within 15 days of the due date may result in:</p>
+        <ul>
+          <li>Suspension of work until payment is received</li>
+          <li>Interest charges of 1.5% per month on overdue amounts</li>
+          <li>Withholding of deliverables until full payment is received</li>
+        </ul>
+
+        <h3>3.4 Refunds</h3>
+        <p>Deposits and payments for completed work are non-refundable. For ongoing projects, refunds may be considered on a case-by-case basis, minus work already completed.</p>
+      </div>
+
+      <div class="reveal">
+        <h2>4. Intellectual Property Rights</h2>
+        <h3>4.1 Client Ownership</h3>
+        <p>Upon full payment, you own all custom code, designs, and deliverables created specifically for your project. This includes:</p>
+        <ul>
+          <li>Custom application code</li>
+          <li>Custom designs and graphics</li>
+          <li>Project-specific documentation</li>
+        </ul>
+
+        <h3>4.2 Our Retained Rights</h3>
+        <p>We retain ownership of:</p>
+        <ul>
+          <li>Pre-existing code libraries and frameworks</li>
+          <li>General methodologies and processes</li>
+          <li>Reusable components and tools</li>
+          <li>Open-source software used in the project</li>
+        </ul>
+
+        <h3>4.3 Third-Party Components</h3>
+        <p>Projects may include third-party software, libraries, or APIs subject to their own licenses. You are responsible for complying with these licenses.</p>
+
+        <h3>4.4 Portfolio Rights</h3>
+        <p>Unless otherwise agreed in writing, we reserve the right to:</p>
+        <ul>
+          <li>Display your project in our portfolio</li>
+          <li>Use it as a case study (with anonymization if requested)</li>
+          <li>Reference you as a client</li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <h2>5. Confidentiality</h2>
+        <h3>5.1 Mutual Confidentiality</h3>
+        <p>Both parties agree to keep confidential all proprietary information shared during the engagement, including:</p>
+        <ul>
+          <li>Business strategies and plans</li>
+          <li>Technical specifications</li>
+          <li>Financial information</li>
+          <li>Trade secrets</li>
+        </ul>
+
+        <h3>5.2 Exceptions</h3>
+        <p>Confidentiality obligations do not apply to information that:</p>
+        <ul>
+          <li>Is publicly available</li>
+          <li>Was known prior to disclosure</li>
+          <li>Is independently developed</li>
+          <li>Must be disclosed by law</li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <h2>6. Warranties and Disclaimers</h2>
+        <h3>6.1 Our Warranties</h3>
+        <p>We warrant that:</p>
+        <ul>
+          <li>Services will be performed in a professional manner</li>
+          <li>Deliverables will substantially conform to specifications</li>
+          <li>We have the right to provide the services</li>
+          <li>Work will not infringe third-party intellectual property rights</li>
+        </ul>
+
+        <h3>6.2 Disclaimer</h3>
+        <p>Except as expressly stated, our services are provided "as is" without warranties of any kind, either express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+
+        <h3>6.3 No Guarantee of Results</h3>
+        <p>We do not guarantee specific business results, traffic, sales, or rankings from our services. Success depends on many factors outside our control.</p>
+      </div>
+
+      <div class="reveal">
+        <h2>7. Limitation of Liability</h2>
+        <h3>7.1 Limitation</h3>
+        <p>To the maximum extent permitted by law, our total liability for any claims arising from our services shall not exceed the total fees paid by you for the specific service giving rise to the claim.</p>
+
+        <h3>7.2 Exclusions</h3>
+        <p>We shall not be liable for:</p>
+        <ul>
+          <li>Indirect, incidental, or consequential damages</li>
+          <li>Loss of profits, revenue, or data</li>
+          <li>Business interruption</li>
+          <li>Damages caused by third-party services or software</li>
+          <li>Issues arising from your misuse of deliverables</li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <h2>8. Client Responsibilities</h2>
+        <h3>8.1 Content and Materials</h3>
+        <p>You are responsible for:</p>
+        <ul>
+          <li>Accuracy of content provided to us</li>
+          <li>Obtaining necessary rights and licenses for materials you provide</li>
+          <li>Ensuring content complies with applicable laws</li>
+          <li>Backup of your data and content</li>
+        </ul>
+
+        <h3>8.2 Third-Party Services</h3>
+        <p>You are responsible for:</p>
+        <ul>
+          <li>Obtaining and maintaining necessary third-party services (hosting, domains, etc.)</li>
+          <li>Paying for third-party service fees</li>
+          <li>Complying with third-party terms of service</li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <h2>9. Support and Maintenance</h2>
+        <h3>9.1 Warranty Period</h3>
+        <p>We provide bug fixes for critical issues for the period specified in your Service Agreement (typically 1-12 months).</p>
+
+        <h3>9.2 Post-Warranty Support</h3>
+        <p>After the warranty period, support and maintenance are available under separate agreements at our then-current rates.</p>
+
+        <h3>9.3 Exclusions</h3>
+        <p>Support does not cover:</p>
+        <ul>
+          <li>Issues caused by modifications made by you or third parties</li>
+          <li>Problems with third-party services or software</li>
+          <li>Feature requests or enhancements</li>
+          <li>User training or consultation</li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <h2>10. Project Timelines</h2>
+        <h3>10.1 Estimates</h3>
+        <p>Project timelines are estimates based on the information available at the time. Actual timelines may vary due to:</p>
+        <ul>
+          <li>Scope changes or additions</li>
+          <li>Delays in client feedback or approvals</li>
+          <li>Technical complexities discovered during development</li>
+          <li>Third-party service issues</li>
+        </ul>
+
+        <h3>10.2 Client Delays</h3>
+        <p>If project delays are caused by client actions or inactions (e.g., late feedback, unavailability), we reserve the right to adjust timelines and may charge additional fees for extended project duration.</p>
+      </div>
+
+      <div class="reveal">
+        <h2>11. Termination</h2>
+        <h3>11.1 Termination by Either Party</h3>
+        <p>Either party may terminate the engagement with 30 days written notice.</p>
+
+        <h3>11.2 Termination for Cause</h3>
+        <p>Either party may terminate immediately if the other party:</p>
+        <ul>
+          <li>Breaches these Terms materially</li>
+          <li>Becomes insolvent or bankrupt</li>
+          <li>Ceases business operations</li>
+        </ul>
+
+        <h3>11.3 Effect of Termination</h3>
+        <p>Upon termination:</p>
+        <ul>
+          <li>You must pay for all work completed to date</li>
+          <li>We will deliver work completed as of the termination date</li>
+          <li>Rights to deliverables vest only upon full payment</li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <h2>12. Indemnification</h2>
+        <p>You agree to indemnify and hold us harmless from any claims, damages, or expenses arising from:</p>
+        <ul>
+          <li>Your use of our deliverables</li>
+          <li>Content or materials you provide</li>
+          <li>Your breach of these Terms</li>
+          <li>Your violation of any laws or third-party rights</li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <h2>13. Force Majeure</h2>
+        <p>Neither party shall be liable for delays or failures in performance resulting from circumstances beyond reasonable control, including natural disasters, acts of government, war, terrorism, pandemics, labor disputes, or infrastructure failures.</p>
+      </div>
+
+      <div class="reveal">
+        <h2>14. Dispute Resolution</h2>
+        <h3>14.1 Negotiation</h3>
+        <p>In the event of any dispute, parties agree to first attempt resolution through good-faith negotiation.</p>
+
+        <h3>14.2 Arbitration</h3>
+        <p>If negotiation fails, disputes shall be resolved through binding arbitration in Kolkata, West Bengal, India, in accordance with the Arbitration and Conciliation Act, 1996.</p>
+
+        <h3>14.3 Governing Law</h3>
+        <p>These Terms shall be governed by and construed in accordance with the laws of India, without regard to conflict of law principles.</p>
+      </div>
+
+      <div class="reveal">
+        <h2>15. General Provisions</h2>
+        <h3>15.1 Entire Agreement</h3>
+        <p>These Terms, together with any Service Agreement or SOW, constitute the entire agreement between the parties.</p>
+
+        <h3>15.2 Amendments</h3>
+        <p>We may update these Terms from time to time. Continued use of our services after changes constitutes acceptance of the new Terms.</p>
+
+        <h3>15.3 Severability</h3>
+        <p>If any provision of these Terms is found to be unenforceable, the remaining provisions shall continue in full force and effect.</p>
+
+        <h3>15.4 Waiver</h3>
+        <p>Failure to enforce any right or provision does not constitute a waiver of that right or provision.</p>
+
+        <h3>15.5 Assignment</h3>
+        <p>You may not assign or transfer these Terms without our prior written consent. We may assign these Terms without restriction.</p>
+
+        <h3>15.6 Independent Contractors</h3>
+        <p>The parties are independent contractors. Nothing in these Terms creates an employment, partnership, or agency relationship.</p>
+      </div>
+
+      <div class="reveal">
+        <h2>16. Contact Information</h2>
+        <p>For questions about these Terms, please contact us at:</p>
+
+        <div class="contact-box">
+          <h3>Navaura Arctiq</h3>
+          <p>
+            Email: <a href="mailto:legal@navaura.in">legal@navaura.in</a><br>
+            Phone: <a href="tel:+919876543210">+91 98765 43210</a><br>
+            Address: Kolkata, West Bengal, India<br>
+            CIN: U62099WB2025OPC275665
+          </p>
+        </div>
+
+        <p class="footer-note">By using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Load Components & Scripts -->
+  <script>
+    // Reveal Animation Observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Load Navigation and Initialize Interactions
+    fetch('/nav.html')
+      .then(response => response.text())
+      .then(data => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(data, 'text/html');
+
+        const nav = doc.querySelector('nav');
+        const navOverlay = doc.querySelector('.nav-overlay');
+        const footer = doc.querySelector('footer');
+        const styles = doc.querySelector('style');
+
+        if (styles) document.head.appendChild(styles);
+        if (nav) document.getElementById('navigation-placeholder').appendChild(nav);
+        if (navOverlay) document.getElementById('navigation-placeholder').appendChild(navOverlay);
+        if (footer) document.getElementById('footer-placeholder').appendChild(footer);
+
+        setTimeout(() => {
+          const menuBtn = document.getElementById('menuToggle');
+          const overlay = document.getElementById('navOverlay');
+          const navBar = document.getElementById('mainNav');
+          const navLinks = document.querySelectorAll('.nav-links a, .nav-links button');
+
+          if (menuBtn && overlay) {
+            menuBtn.addEventListener('click', () => {
+              overlay.classList.toggle('active');
+              if (overlay.classList.contains('active')) {
+                menuBtn.textContent = "[ CLOSE ]";
+                document.body.style.overflow = "hidden";
+              } else {
+                menuBtn.textContent = "[ MENU ]";
+                document.body.style.overflow = "";
+              }
+            });
+
+            navLinks.forEach(link => {
+              link.addEventListener('click', () => {
+                overlay.classList.remove('active');
+                menuBtn.textContent = "[ MENU ]";
+                document.body.style.overflow = "";
+              });
+            });
+          }
+
+          window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+              navBar.classList.add('scrolled');
+            } else {
+              navBar.classList.remove('scrolled');
+            }
+          });
+
+        }, 100);
+      })
+      .catch(err => console.error('Error loading components:', err));
+  </script>
+</body>
+</html>

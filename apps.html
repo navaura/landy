@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apps & Portfolio - NAVAURA ARCTIQ</title>
+  <meta name="description" content="Explore our portfolio of web applications and case studies. See what we've built for businesses like yours.">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="portfolio, case studies, web apps, software projects, development showcase, Navaura Arctiq, SAYVA chatbot, Vedi plus AI research, no code chatbot builder India, AI chatbot without coding India, Gemini AI chatbot builder, no code chatbot Gemini India">
+  <meta name="author" content="NAVAURA ARCTIQ">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://navaura.in/apps.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://navaura.in/apps.html">
+  <meta property="og:title" content="Apps & Portfolio - NAVAURA ARCTIQ">
+  <meta property="og:description" content="Explore our portfolio of web applications and case studies. See what we've built for businesses like yours.">
+  <meta property="og:image" content="https://navaura.in/assets/images/apps-og.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Apps & Portfolio - NAVAURA ARCTIQ">
+  <meta name="twitter:description" content="Explore our portfolio of web applications and case studies.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- Professional Tech Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Structured Data: SoftwareApplication (SAYVA) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SAYVA",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "url": "https://sayva.navaura.in",
+    "description": "No-code AI chatbot creation platform powered by Gemini AI, with integrated CRM, analytics, and feedback management.",
+    "creator": {
+      "@type": "Organization",
+      "name": "NAVAURA ARCTIQ",
+      "url": "https://navaura.in/"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #030303;
+      --surface: #0a0a0a;
+      --fg: #ffffff;
+      --dim: rgba(255, 255, 255, 0.4);
+      --border: rgba(255, 255, 255, 0.1);
+      --accent: #00ff88;
+      --font-main: 'Manrope', sans-serif;
+      --font-mono: 'Space Mono', monospace;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-main);
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- BACKGROUND GRID --- */
+    .bg-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 100px 100px;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* --- TYPOGRAPHY --- */
+    h1, h2, h3 {
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .mono-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--dim);
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 3rem;
+      border-left: 2px solid var(--fg);
+      padding-left: 2rem;
+    }
+
+    /* --- LAYOUT UTILS --- */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 5%;
+      position: relative;
+      z-index: 2;
+    }
+
+    section {
+      padding: 8rem 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* --- HERO --- */
+    .page-hero {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 10vh;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 0.95;
+      margin-bottom: 2rem;
+    }
+
+    .page-hero p {
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      color: var(--dim);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* --- FILTER TABS --- */
+    .filter-tabs {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin: 4rem 0;
+      flex-wrap: wrap;
+    }
+
+    .filter-tab {
+      padding: 0.8rem 2rem;
+      background: transparent;
+      color: var(--dim);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .filter-tab:hover,
+    .filter-tab.active {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--fg);
+      border-color: var(--fg);
+    }
+
+    /* --- PORTFOLIO GRID --- */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      border-top: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+      margin-top: 4rem;
+    }
+
+    .portfolio-card {
+      padding: 3rem;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      transition: background 0.3s ease;
+      background: rgba(3, 3, 3, 0.4);
+      grid-column: span 6;
+    }
+
+    .portfolio-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .portfolio-card.featured {
+      grid-column: span 12;
+      background: linear-gradient(135deg, rgba(0, 255, 136, 0.05) 0%, rgba(3, 3, 3, 0.4) 100%);
+    }
+
+    .portfolio-card.featured:hover {
+      background: linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    }
+
+    .portfolio-card::before {
+      content: '+';
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: var(--border);
+      font-family: var(--font-mono);
+    }
+
+    .portfolio-card.featured::before {
+      content: '★';
+      color: var(--accent);
+    }
+
+    .portfolio-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      display: block;
+      opacity: 0.6;
+    }
+
+    .portfolio-category {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--dim);
+      margin-bottom: 1rem;
+    }
+
+    .portfolio-card.featured .portfolio-category {
+      color: var(--accent);
+    }
+
+    .portfolio-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .portfolio-card.featured h3 {
+      font-size: 2rem;
+    }
+
+    .portfolio-card p {
+      color: var(--dim);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .portfolio-tags {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .tag {
+      padding: 0.4rem 1rem;
+      background: transparent;
+      border: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--dim);
+    }
+
+    .portfolio-card.featured .tag {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .portfolio-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: var(--fg);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: opacity 0.3s ease;
+    }
+
+    .portfolio-link:hover {
+      opacity: 0.6;
+    }
+
+    .portfolio-card.featured .portfolio-link {
+      color: var(--accent);
+      font-size: 0.85rem;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: rgba(0, 255, 136, 0.1);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 1rem;
+    }
+
+    .status-badge.coming-soon {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: var(--dim);
+      color: var(--dim);
+    }
+
+    /* --- CASE STUDIES --- */
+    .case-study {
+      margin-bottom: 6rem;
+      padding-bottom: 6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .case-study:last-child {
+      border-bottom: none;
+    }
+
+    .case-study h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    .case-study-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0 3rem 0;
+      padding: 3rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+    }
+
+    .case-study-stat {
+      text-align: center;
+    }
+
+    .case-study-stat .number {
+      font-size: 3rem;
+      font-weight: 200;
+      font-family: var(--font-mono);
+      letter-spacing: -2px;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .case-study-stat .label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--dim);
+    }
+
+    .case-study p {
+      font-size: 1rem;
+      color: var(--dim);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .case-study p strong {
+      color: var(--fg);
+      font-weight: 600;
+    }
+
+    /* --- CTA SECTION --- */
+    .cta-section {
+      text-align: center;
+      padding: 10rem 5%;
+      background: var(--surface);
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.2rem 3rem;
+      background: var(--fg);
+      color: var(--bg);
+      font-family: var(--font-mono);
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: #ccc;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.2rem 3rem;
+      background: transparent;
+      color: var(--fg);
+      border: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--fg);
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateY(-2px);
+    }
+.portfolio-card.featured.emergency {
+    border: 1px solid rgba(255, 60, 60, 0.3);
+    box-shadow: 0 0 40px rgba(255, 40, 40, 0.08);
+}
+
+.emergency-label {
+    color: #ff4d4d;
+    letter-spacing: 1px;
+}
+
+.status-badge.critical {
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff3b3b;
+    border: 1px solid rgba(255,0,0,0.2);
+}
+
+.emergency-btn {
+    color: #ff4d4d;
+    border-color: rgba(255, 80, 80, 0.4);
+}
+
+.emergency-btn:hover {
+    background: rgba(255, 60, 60, 0.1);
+}
+
+    /* --- ANIMATIONS --- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 900px) {
+      .portfolio-card { grid-column: span 12 !important; }
+      .case-study-meta { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+    }
+
+    @media (max-width: 600px) {
+      .filter-tabs { gap: 0.5rem; }
+      .filter-tab { padding: 0.6rem 1rem; font-size: 0.65rem; }
+      .cta-buttons { flex-direction: column; }
+      .btn-primary, .btn-secondary { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Grid -->
+  <div class="bg-grid"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="reveal">
+        <span class="mono-label">Portfolio // What We've Built</span>
+        <h1>REAL SOLUTIONS<br>FOR REAL<br>BUSINESSES</h1>
+        <p>Explore the applications we've built and the results they've delivered for businesses across industries.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="container">
+      <span class="mono-label">01 // Live Projects</span>
+      <h2 class="section-title reveal">OUR WORK</h2>
+
+      <div class="filter-tabs reveal">
+        <button class="filter-tab active" data-filter="all">ALL PROJECTS</button>
+        <button class="filter-tab" data-filter="web">WEB APPS</button>
+        <button class="filter-tab" data-filter="ai">AI/ML</button>
+        <button class="filter-tab" data-filter="mobile">MOBILE</button>
+        <button class="filter-tab" data-filter="enterprise">ENTERPRISE</button>
+      </div>
+
+      <div class="portfolio-grid">
+
+ <!-- FEATURED: LAST SEEN -->
+<div class="portfolio-card featured emergency reveal" data-category="mobile safety">
+
+  <span class="portfolio-icon">🚨</span>
+  <div class="portfolio-category emergency-label">★ PRIMARY SYSTEM — EMERGENCY PLATFORM</div>
+
+  <h3>LAST SEEN — Survival Check-in System</h3>
+
+  <p>
+    Real-world emergency survival infrastructure built for failure scenarios.
+    Offline-triggered emergency escalation, OS-level foreground calling,
+    forced alert activation and automated inactivity detection.
+    When users go silent beyond the safety window — the device itself initiates emergency protocols.
+    Internet is optional. Survival is not.
+  </p>
+
+  <span class="status-badge critical">⚠ LIVE — ACTIVE MONITORING</span>
+
+  <div class="portfolio-tags">
+    <span class="tag">Android Native</span>
+    <span class="tag">Foreground Emergency Service</span>
+    <span class="tag">Offline Trigger Engine</span>
+    <span class="tag">System Alarm Manager</span>
+    <span class="tag">Battery Safe Execution</span>
+    <span class="tag">Production Deployment</span>
+  </div>
+
+  <div class="portfolio-actions">
+    <a href="https://lastseen.navaura.in" class="portfolio-link emergency-btn">SYSTEM PAGE →</a>
+    <a href="https://lastseen.navaura.in/app/lastseenv1.apk" class="portfolio-link secondary emergency-btn">DOWNLOAD APK →</a>
+  </div>
+
+</div>
+
+
+<!-- FEATURED: SAYVA AI -->
+<div class="portfolio-card featured ai reveal" data-category="ai web">
+
+  <span class="portfolio-icon">🤖</span>
+  <div class="portfolio-category ai-label">★ FEATURED AI PLATFORM</div>
+
+  <h3>Sayva — AI Chatbot Creation Platform</h3>
+
+  <p>
+    Production-grade no-code AI chatbot infrastructure for business automation.
+    Includes conversation intelligence, CRM integration, customer care workflow automation
+    and feedback processing pipelines — reducing manual operations by up to 94%.
+  </p>
+
+  <span class="status-badge live">✓ LIVE IN PRODUCTION</span>
+
+  <div class="portfolio-tags">
+    <span class="tag">Python</span>
+    <span class="tag">FastAPI</span>
+    <span class="tag">PyTorch</span>
+    <span class="tag">Gemini AI</span>
+    <span class="tag">React.js</span>
+    <span class="tag">PostgreSQL</span>
+  </div>
+
+  <div class="portfolio-actions">
+    <a href="https://sayva.navaura.in" class="portfolio-link">PLATFORM DETAILS →</a>
+    <a href="https://sayva.navaura.in/marketplace" target="_blank" class="portfolio-link secondary">Chat with Other's BOTS →</a>
+  </div>
+
+</div>
+
+
+        <!-- Real-Time Analytics Dashboard -->
+        <div class="portfolio-card reveal" data-category="web enterprise" style="transition-delay: 0.2s;">
+          <span class="portfolio-icon">📊</span>
+          <div class="portfolio-category">Web Application</div>
+          <h3>Real-Time Analytics Dashboard</h3>
+          <p>Custom analytics platform with real-time data visualization, predictive insights, and automated reporting for growing SaaS companies. Transforms complex data into actionable business intelligence.</p>
+          <div class="portfolio-tags">
+            <span class="tag">Flask</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Chart.js</span>
+            <span class="tag">WebSockets</span>
+          </div>
+          <a href="./contact" class="portfolio-link">LEARN MORE →</a>
+        </div>
+
+        <!-- E-Commerce Platform -->
+        <div class="portfolio-card reveal" data-category="web" style="transition-delay: 0.1s;">
+          <span class="portfolio-icon">🛍️</span>
+          <div class="portfolio-category">E-Commerce</div>
+          <h3>Multi-Vendor Marketplace</h3>
+          <p>Scalable marketplace platform with advanced search, real-time inventory management, and integrated payment processing. Handles 10,000+ daily transactions with zero downtime.</p>
+          <div class="portfolio-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">Stripe</span>
+            <span class="tag">Redis</span>
+            <span class="tag">AWS</span>
+          </div>
+          <a href="./contact" class="portfolio-link">LEARN MORE →</a>
+        </div>
+
+        <!-- Security Platform -->
+        <div class="portfolio-card reveal" data-category="enterprise" style="transition-delay: 0.2s;">
+          <span class="portfolio-icon">🛡️</span>
+          <div class="portfolio-category">Enterprise Security</div>
+          <h3>Zero-Trust Security Platform</h3>
+          <p>Enterprise-grade security infrastructure with multi-factor authentication, role-based access control, comprehensive audit logging, and real-time threat detection.</p>
+          <div class="portfolio-tags">
+            <span class="tag">Python</span>
+            <span class="tag">OAuth 2.0</span>
+            <span class="tag">JWT</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Docker</span>
+          </div>
+          <a href="./contact" class="portfolio-link">LEARN MORE →</a>
+        </div>
+
+        <!-- AI Customer Support -->
+        <div class="portfolio-card reveal" data-category="ai web" style="transition-delay: 0.1s;">
+          <span class="portfolio-icon">💬</span>
+          <div class="portfolio-category">AI-Powered Support</div>
+          <h3>Intelligent Customer Support AI</h3>
+          <p>Advanced NLP-powered chatbot system that understands context and intent, reducing support tickets by 67% while improving customer satisfaction scores by 42%.</p>
+          <div class="portfolio-tags">
+            <span class="tag">Hugging Face</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">React</span>
+            <span class="tag">NLP</span>
+            <span class="tag">BERT</span>
+          </div>
+          <a href="./contact" class="portfolio-link">LEARN MORE →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section id="case-studies" style="background: var(--surface);">
+    <div class="container">
+      <span class="mono-label">02 // Success Stories</span>
+      <h2 class="section-title reveal">CASE STUDIES</h2>
+      <p style="font-size: 1.1rem; color: var(--dim); margin-bottom: 4rem;" class="reveal">Deep dives into how we've helped businesses transform through technology.</p>
+
+      <div class="case-study reveal">
+        <h3>Poultry Business: Digital Transformation with Order & Inventory Management</h3>
+        <div class="case-study-meta">
+          <div class="case-study-stat">
+            <span class="number">85%</span>
+            <span class="label">Time Saved</span>
+          </div>
+          <div class="case-study-stat">
+            <span class="number">12+</span>
+            <span class="label">Daily Orders</span>
+          </div>
+          <div class="case-study-stat">
+            <span class="number">3 Weeks</span>
+            <span class="label">Development Time</span>
+          </div>
+        </div>
+        <p><strong>Challenge:</strong> A local poultry business struggled with manual order tracking, delivery coordination, and inventory management using paper records and WhatsApp messages, leading to frequent errors and customer dissatisfaction.</p>
+        <p><strong>Solution:</strong> We built a custom web application with real-time order tracking, automated delivery routing, inventory management with low-stock alerts, and customer communication portal.</p>
+        <p><strong>Results:</strong> Processing time reduced by 85%, order accuracy improved to 99.2%, customer satisfaction increased by 58%, and the business now efficiently manages 500+ daily orders with complete visibility.</p>
+      </div>
+
+      <div class="case-study reveal">
+        <h3>Sayva AI: Enterprise Chatbot Platform Launch</h3>
+        <div class="case-study-meta">
+          <div class="case-study-stat">
+            <span class="number">90%</span>
+            <span class="label">Automation Rate</span>
+          </div>
+          <div class="case-study-stat">
+            <span class="number">100+</span>
+            <span class="label">Bots Created</span>
+          </div>
+          <div class="case-study-stat">
+            <span class="number">Live</span>
+            <span class="label">Production Status</span>
+          </div>
+        </div>
+        <p><strong>Challenge:</strong> Businesses needed an affordable, no-code solution to deploy AI chatbots for customer service without hiring developers or data scientists.</p>
+        <p><strong>Solution:</strong> We developed Sayva AI, a comprehensive platform that allows anyone to create, train, and deploy intelligent chatbots with integrated CRM, analytics, and feedback management using cutting-edge Gemini AI.</p>
+        <p><strong>Results:</strong> Platform went live in production, enabling businesses to automate 94% of routine customer interactions, reduce support costs by 70%, and improve response times from hours to seconds.</p>
+      </div>
+
+      <div class="case-study reveal">
+        <h3>Financial Services: Automated Reporting Revolution</h3>
+        <div class="case-study-meta">
+          <div class="case-study-stat">
+            <span class="number">92%</span>
+            <span class="label">Faster Reports</span>
+          </div>
+          <div class="case-study-stat">
+            <span class="number">₹2.4M</span>
+            <span class="label">Annual Savings</span>
+          </div>
+          <div class="case-study-stat">
+            <span class="number">5 Weeks</span>
+            <span class="label">Development Time</span>
+          </div>
+        </div>
+        <p><strong>Challenge:</strong> A financial services firm spent hundreds of hours monthly creating reports manually from multiple data sources, leading to delays, errors, and compliance risks.</p>
+        <p><strong>Solution:</strong> We developed an automated reporting platform that integrates with multiple data sources, performs real-time analysis, generates customizable reports, and ensures regulatory compliance.</p>
+        <p><strong>Results:</strong> Report generation time reduced by 92%, eliminating all manual errors, ensuring 100% compliance, and saving the company ₹2.4M annually in labor costs while improving decision-making speed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="reveal">
+        <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; margin-bottom: 2rem; letter-spacing: -0.03em;">READY TO BUILD<br>SOMETHING AMAZING?</h2>
+        <p style="font-family: var(--font-mono); font-size: 1.1rem; color: var(--dim); margin-bottom: 3rem;">Let's create your success story. From concept to deployment, we'll build the perfect solution for your business.</p>
+        <div class="cta-buttons">
+          <a href="./contact" class="btn-primary">START YOUR PROJECT</a>
+          <a href="./services" class="btn-secondary">VIEW SERVICES</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Load Components & Scripts -->
+  <script>
+    // Filter functionality
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.dataset.filter;
+
+        portfolioCards.forEach(card => {
+          if (filter === 'all') {
+            card.style.display = 'block';
+          } else {
+            const categories = card.dataset.category.split(' ');
+            if (categories.includes(filter)) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+
+    // Reveal Animation Observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

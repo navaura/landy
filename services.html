@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - NAVAURA ARCTIQ</title>
+  <meta name="description" content="Comprehensive web development services powered by AI and automation. Custom solutions for modern businesses.">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="web development services, AI services, automation services, software development, custom software, app development, automation software company India, custom AI development India, AI integration services India, FastAPI development company">
+  <meta name="author" content="NAVAURA ARCTIQ">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://navaura.in/services.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://navaura.in/services.html">
+  <meta property="og:title" content="Services - NAVAURA ARCTIQ">
+  <meta property="og:description" content="Comprehensive web development services powered by AI and automation. Custom solutions for modern businesses.">
+  <meta property="og:image" content="https://navaura.in/assets/images/services-og.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Services - NAVAURA ARCTIQ">
+  <meta name="twitter:description" content="Comprehensive web development services powered by AI and automation.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- Professional Tech Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="/chatui.js"></script>
+  
+  <style>
+    :root {
+      --bg: #030303;
+      --surface: #0a0a0a;
+      --fg: #ffffff;
+      --dim: rgba(255, 255, 255, 0.4);
+      --border: rgba(255, 255, 255, 0.1);
+      --font-main: 'Manrope', sans-serif;
+      --font-mono: 'Space Mono', monospace;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-main);
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- BACKGROUND GRID --- */
+    .bg-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 100px 100px;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* --- TYPOGRAPHY --- */
+    h1, h2, h3 {
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .mono-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--dim);
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 3rem;
+      border-left: 2px solid var(--fg);
+      padding-left: 2rem;
+    }
+
+    /* --- LAYOUT UTILS --- */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 5%;
+      position: relative;
+      z-index: 2;
+    }
+
+    section {
+      padding: 8rem 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* --- HERO --- */
+    .page-hero {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 10vh;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 0.95;
+      margin-bottom: 2rem;
+    }
+
+    .page-hero p {
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      color: var(--dim);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* --- SERVICES GRID --- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .service-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      min-height: 240px;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--fg), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    .service-card:hover::before {
+      transform: translateX(100%);
+    }
+
+    .service-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .service-card.large {
+      grid-column: span 2;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      line-height: 1;
+      filter: grayscale(0.3);
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover .service-icon {
+      filter: grayscale(0);
+      transform: scale(1.1);
+    }
+
+    .card-header h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+
+    .service-description {
+      color: var(--dim);
+      font-size: 1rem;
+      line-height: 1.7;
+      flex-grow: 1;
+      margin: 0;
+    }
+
+    .service-arrow {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+      font-size: 1.8rem;
+      color: var(--dim);
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover .service-arrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* --- PRICING SECTION --- */
+    .pricing-toggle-container {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .pricing-toggle-wrap {
+      display: inline-flex;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      padding: 0.4rem;
+      gap: 0.4rem;
+    }
+
+    .pricing-toggle {
+      padding: 0.75rem 2rem;
+      border: none;
+      background: transparent;
+      color: var(--dim);
+      cursor: pointer;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .pricing-toggle.active {
+      background: var(--fg);
+      color: var(--bg);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      margin-top: 4rem;
+    }
+
+    .pricing-card {
+      background: var(--bg);
+      padding: 3rem 2rem;
+      position: relative;
+      transition: background 0.3s ease;
+    }
+
+    .pricing-card:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .pricing-card.featured {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .pricing-card.featured::after {
+      content: 'POPULAR';
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      color: var(--dim);
+      border: 1px solid var(--border);
+      padding: 0.3rem 0.8rem;
+    }
+
+    .pricing-card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      font-size: 3rem;
+      font-weight: 200;
+      font-family: var(--font-mono);
+      letter-spacing: -2px;
+      margin: 2rem 0;
+    }
+
+    .price span {
+      font-size: 1rem;
+      color: var(--dim);
+      font-weight: 400;
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin: 2rem 0;
+      padding: 0;
+    }
+
+    .pricing-features li {
+      padding: 0.8rem 0;
+      color: var(--dim);
+      font-size: 0.9rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .pricing-features li:last-child {
+      border-bottom: none;
+    }
+
+    .cta-button {
+      display: inline-block;
+      width: 100%;
+      padding: 1rem 2rem;
+      background: var(--fg);
+      color: var(--bg);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-align: center;
+      transition: all 0.3s ease;
+      margin-top: 1.5rem;
+    }
+
+    .cta-button:hover {
+      background: #ccc;
+      transform: translateY(-2px);
+    }
+
+    .cta-button.secondary {
+      background: transparent;
+      color: var(--fg);
+      border: 1px solid var(--border);
+    }
+
+    .cta-button.secondary:hover {
+      border-color: var(--fg);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .pricing-note {
+      background: rgba(255, 255, 255, 0.02);
+      border-left: 2px solid var(--fg);
+      padding: 2rem;
+      margin: 1.5rem 0;
+    }
+
+    .pricing-note p {
+      font-size: 0.85rem;
+      color: var(--dim);
+      margin: 0;
+    }
+
+    .pricing-note strong {
+      color: var(--fg);
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 4rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .benefit-card {
+      padding: 2rem;
+      border: 1px solid var(--border);
+      background: rgba(3, 3, 3, 0.4);
+    }
+
+    .benefit-card h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--fg);
+    }
+
+    .benefit-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .benefit-card ul li {
+      padding: 0.4rem 0;
+      color: var(--dim);
+      font-size: 0.9rem;
+    }
+
+    /* --- ANIMATIONS --- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+
+    @media (max-width: 768px) {
+      .service-card.large {
+        grid-column: span 1;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .card-header {
+        gap: 1rem;
+      }
+
+      .service-icon {
+        font-size: 2.5rem;
+      }
+
+      .card-header h3 {
+        font-size: 1.3rem;
+      }
+
+      .service-description {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .grid-cell { grid-column: span 12 !important; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .benefits-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .pricing-toggle {
+        padding: 0.6rem 1rem;
+        font-size: 0.65rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Grid -->
+  <div class="bg-grid"></div>
+
+  <!-- Navigation Placeholder -->
+  <div id="navigation-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="reveal">
+<span class="mono-label">Operating Systems for Modern Businesses</span>
+<h1>SYSTEMS THAT<br>REMOVE WORK,<br>NOT ADD IT</h1>
+<p>
+We design automation-first digital systems that quietly replace manual processes.
+No fluff. No bloated software. Just infrastructure that scales while you sleep.
+</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+<span class="mono-label">01 // System Modules</span>
+<h2 class="section-title reveal">INFRASTRUCTURE WE BUILD</h2>
+
+      <div class="services-grid">
+        <a href="./our-services/web-development" class="service-card large">
+          <div class="card-header">
+            <span class="service-icon">🚀</span>
+            <h3>Web Development</h3>
+          </div>
+          <p class="service-description">
+            Custom web applications built for performance and scalability. From landing pages to complex enterprise platforms.
+          </p>
+          <div class="service-arrow">→</div>
+        </a>
+
+        <a href="./our-services/app-development" class="service-card">
+          <div class="card-header">
+            <span class="service-icon">📱</span>
+            <h3>App Development</h3>
+          </div>
+          <p class="service-description">
+            Native and cross-platform mobile apps for iOS and Android that deliver exceptional user experiences.
+          </p>
+          <div class="service-arrow">→</div>
+        </a>
+
+        <a href="./our-services/ai-automation" class="service-card">
+          <div class="card-header">
+            <span class="service-icon">🤖</span>
+            <h3>AI & Automation</h3>
+          </div>
+          <p class="service-description">
+            Intelligent automation and AI solutions that transform business operations and reduce manual work.
+          </p>
+          <div class="service-arrow">→</div>
+        </a>
+
+        <a href="./our-services/ecommerce-development" class="service-card">
+          <div class="card-header">
+            <span class="service-icon">🛍️</span>
+            <h3>E-Commerce</h3>
+          </div>
+          <p class="service-description">
+            Complete online store solutions with payment processing, inventory management, and order fulfillment.
+          </p>
+          <div class="service-arrow">→</div>
+        </a>
+
+        <a href="./our-services/ui-ux-design" class="service-card large">
+          <div class="card-header">
+            <span class="service-icon">🎨</span>
+            <h3>UI/UX Design</h3>
+          </div>
+          <p class="service-description">
+            User-centered design that drives engagement and conversion. Beautiful interfaces backed by research and data.
+          </p>
+          <div class="service-arrow">→</div>
+        </a>
+
+        <a href="./our-services/custom-software" class="service-card">
+          <div class="card-header">
+            <span class="service-icon">⚙️</span>
+            <h3>Custom Software</h3>
+          </div>
+          <p class="service-description">
+            Bespoke software solutions tailored to your unique business requirements and workflows.
+          </p>
+          <div class="service-arrow">→</div>
+        </a>
+
+        <a href="./our-services/backend-api-development" class="service-card">
+          <div class="card-header">
+            <span class="service-icon">⚡</span>
+            <h3>Backend & APIs</h3>
+          </div>
+          <p class="service-description">
+            Robust backend systems and APIs built for performance, scalability, and security.
+          </p>
+          <div class="service-arrow">→</div>
+        </a>
+
+        <a href="./our-services/cloud-deployment" class="service-card">
+          <div class="card-header">
+            <span class="service-icon">☁️</span>
+            <h3>Cloud & DevOps</h3>
+          </div>
+          <p class="service-description">
+            Cloud infrastructure and deployment pipelines that ensure reliability and automatic scaling.
+          </p>
+          <div class="service-arrow">→</div>
+        </a>
+
+        <a href="./our-services/seo-services" class="service-card">
+          <div class="card-header">
+            <span class="service-icon">🔍</span>
+            <h3>SEO Services</h3>
+          </div>
+          <p class="service-description">
+            Data-driven SEO strategies that improve search rankings and drive organic traffic to your site.
+          </p>
+          <div class="service-arrow">→</div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" style="background: var(--surface);">
+    <div class="container">
+      <span class="mono-label">02 // Investment</span>
+      <h2 class="section-title reveal">TRANSPARENT PRICING</h2>
+     <p style="font-size: 1.1rem; color: var(--dim); margin-bottom: 2rem;" class="reveal">
+This is not hourly work. You are investing in systems that replace cost, time, and dependency.
+Pricing reflects responsibility, not effort.
+</p>
+
+
+      <div class="pricing-toggle-container reveal">
+        <div class="pricing-toggle-wrap">
+          <button id="oneTimeBtn" class="pricing-toggle active">ONE-TIME</button>
+          <button id="subscriptionBtn" class="pricing-toggle">SUBSCRIPTION</button>
+        </div>
+      </div>
+
+      <!-- ONE-TIME PRICING -->
+      <div id="oneTimePricing" class="pricing-grid reveal">
+        <div class="pricing-card">
+          <h3>STARTER</h3>
+          <div class="price">₹50K<span>/project(starting with a basic application)</span></div>
+<p style="color: var(--dim); margin-bottom: 2rem;">
+For testing ideas and validating direction
+</p>
+
+          <ul class="pricing-features">
+            <li>Up to 5 pages/views</li>
+            <li>Responsive design</li>
+            <li>Basic SEO optimization</li>
+            <li>Contact form integration</li>
+            <li>48-hour prototype delivery</li>
+            <li>1 month support</li>
+          </ul>
+          <a href="./company/contact" class="cta-button secondary">GET STARTED</a>
+        </div>
+
+        <div class="pricing-card featured">
+          <h3>PROFESSIONAL</h3>
+          <div class="price">₹1.5L<span>/project</span></div>
+<p style="color: var(--dim); margin-bottom: 2rem;">
+For businesses ready to operationalize
+</p>
+
+          <ul class="pricing-features">
+            <li>Up to 15 pages/views</li>
+            <li>Custom UI/UX design</li>
+            <li>Advanced SEO optimization</li>
+            <li>Database integration</li>
+            <li>API development</li>
+            <li>Authentication system</li>
+            <li>48-hour prototype delivery</li>
+            <li>3 months support</li>
+          </ul>
+          <a href="./company/contact" class="cta-button">GET STARTED</a>
+        </div>
+
+        <div class="pricing-card">
+          <h3>ENTERPRISE</h3>
+          <div class="price">Custom<span>/quote</span></div>
+<p style="color: var(--dim); margin-bottom: 2rem;">
+For organizations building long-term digital infrastructure
+</p>
+
+          <ul class="pricing-features">
+            <li>Unlimited pages/views</li>
+            <li>Full-stack development</li>
+            <li>AI/ML integration</li>
+            <li>Microservices architecture</li>
+            <li>Advanced security features</li>
+            <li>Performance optimization</li>
+            <li>Dedicated project manager</li>
+            <li>12 months support</li>
+          </ul>
+          <a href="./company/contact" class="cta-button secondary">CONTACT US</a>
+        </div>
+      </div>
+
+      <!-- SUBSCRIPTION PRICING -->
+      <div id="subscriptionPricing" class="pricing-grid reveal" style="display: none;">
+        <div class="pricing-card">
+          <h3>STARTER PLUS</h3>
+          <div class="price">₹8K<span>/month</span></div>
+          <p style="color: var(--dim); margin-bottom: 2rem;">
+Ongoing system stability & controlled evolution
+</p>
+          <ul class="pricing-features">
+            <li>Everything in Starter</li>
+            <li>Bug fixes & security patches</li>
+            <li>Content updates</li>
+            <li>Performance monitoring</li>
+            <li>Monthly analytics report</li>
+            <li>Priority email support</li>
+          </ul>
+          <div class="pricing-note">
+            <p><strong>Update Policy:</strong> Includes all maintenance updates. Major feature additions billed separately.</p>
+          </div>
+          <a href="./company/contact" class="cta-button secondary">SUBSCRIBE</a>
+        </div>
+
+        <div class="pricing-card featured">
+          <h3>PROFESSIONAL PLUS</h3>
+          <div class="price">₹20K<span>/month</span></div>
+          <p style="color: var(--dim); margin-bottom: 2rem;">Full-service ongoing support</p>
+          <ul class="pricing-features">
+            <li>Everything in Professional</li>
+            <li>Unlimited bug fixes</li>
+            <li>Feature enhancements</li>
+            <li>API maintenance</li>
+            <li>Database optimization</li>
+            <li>24/7 uptime monitoring</li>
+            <li>Weekly analytics</li>
+            <li>Priority phone support</li>
+          </ul>
+          <div class="pricing-note">
+            <p><strong>Update Policy:</strong> All updates included within scope. Major new features quoted at ₹5K-15K.</p>
+          </div>
+          <a href="./company/contact" class="cta-button">SUBSCRIBE</a>
+        </div>
+
+        <div class="pricing-card">
+          <h3>ENTERPRISE UNLIMITED</h3>
+          <div class="price">₹50K+<span>/month</span></div>
+          <p style="color: var(--dim); margin-bottom: 2rem;">
+A dedicated engineering function, without internal overhead
+</p>
+
+          <ul class="pricing-features">
+            <li>Everything in Enterprise</li>
+            <li>Continuous development</li>
+            <li>Regular feature rollouts</li>
+            <li>AI/ML model updates</li>
+            <li>Infrastructure scaling</li>
+            <li>Dedicated dev team</li>
+            <li>Real-time monitoring</li>
+            <li>Custom SLA agreements</li>
+          </ul>
+          <div class="pricing-note">
+            <p><strong>Dynamic Pricing:</strong> Stable rates for iterations. Large-scale additions require budget discussion.</p>
+          </div>
+          <a href="./company/contact" class="cta-button secondary">CONTACT US</a>
+        </div>
+      </div>
+
+      <!-- BENEFITS -->
+      <div style="margin-top: 8rem;">
+        <h3 style="font-size: 1.8rem; font-weight: 400; margin-bottom: 3rem; text-align: center;" class="reveal">
+HOW CONTROL IS MAINTAINED
+</h3>
+
+        <div class="benefits-grid reveal">
+          <div class="benefit-card">
+            <h4>✓ INCLUDED ALWAYS</h4>
+            <ul>
+              <li>Bug fixes & patches</li>
+              <li>Security updates</li>
+              <li>Performance optimization</li>
+              <li>Content modifications</li>
+              <li>Minor UI adjustments</li>
+              <li>Hosting & maintenance</li>
+            </ul>
+          </div>
+          <div class="benefit-card">
+            <h4>⚡ ADDITIONAL COST</h4>
+            <ul>
+              <li>New page/module addition</li>
+              <li>Major feature implementation</li>
+              <li>Third-party integrations</li>
+              <li>Complete redesigns</li>
+              <li>Scaling beyond scope</li>
+              <li>Complex custom requests</li>
+            </ul>
+          </div>
+          <div class="benefit-card">
+            <h4>📊 PRICING STABILITY</h4>
+            <p style="color: var(--dim); font-size: 0.9rem; line-height: 1.8; margin: 0;">Your monthly rate stays consistent for ongoing maintenance and incremental improvements. Only significant scope expansions trigger pricing discussions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<p style="text-align:center; font-family: var(--font-mono); font-size: 0.75rem; color: var(--dim); margin-top:4rem;">
+Navaura Arctiq does not sell development. We deploy systems.
+</p>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Load Components & Scripts -->
+  <script>
+    // Pricing Toggle
+    const oneTimeBtn = document.getElementById('oneTimeBtn');
+    const subscriptionBtn = document.getElementById('subscriptionBtn');
+    const oneTimePricing = document.getElementById('oneTimePricing');
+    const subscriptionPricing = document.getElementById('subscriptionPricing');
+
+    oneTimeBtn.addEventListener('click', function() {
+      oneTimeBtn.classList.add('active');
+      subscriptionBtn.classList.remove('active');
+      oneTimePricing.style.display = 'grid';
+      subscriptionPricing.style.display = 'none';
+    });
+
+    subscriptionBtn.addEventListener('click', function() {
+      subscriptionBtn.classList.add('active');
+      oneTimeBtn.classList.remove('active');
+      subscriptionPricing.style.display = 'grid';
+      oneTimePricing.style.display = 'none';
+    });
+
+    // Reveal Animation Observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Load Navigation and Initialize Interactions
+    fetch('/nav.html')
+      .then(response => response.text())
+      .then(data => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(data, 'text/html');
+
+        const nav = doc.querySelector('nav');
+        const navOverlay = doc.querySelector('.nav-overlay');
+        const footer = doc.querySelector('footer');
+        const styles = doc.querySelector('style');
+
+        if (styles) document.head.appendChild(styles);
+        if (nav) document.getElementById('navigation-placeholder').appendChild(nav);
+        if (navOverlay) document.getElementById('navigation-placeholder').appendChild(navOverlay);
+        if (footer) document.getElementById('footer-placeholder').appendChild(footer);
+
+        setTimeout(() => {
+          const menuBtn = document.getElementById('menuToggle');
+          const overlay = document.getElementById('navOverlay');
+          const navBar = document.getElementById('mainNav');
+          const navLinks = document.querySelectorAll('.nav-links a, .nav-links button');
+
+          if (menuBtn && overlay) {
+            menuBtn.addEventListener('click', () => {
+              overlay.classList.toggle('active');
+              if (overlay.classList.contains('active')) {
+                menuBtn.textContent = "[ CLOSE ]";
+                document.body.style.overflow = "hidden";
+              } else {
+                menuBtn.textContent = "[ MENU ]";
+                document.body.style.overflow = "";
+              }
+            });
+
+            navLinks.forEach(link => {
+              link.addEventListener('click', () => {
+                overlay.classList.remove('active');
+                menuBtn.textContent = "[ MENU ]";
+                document.body.style.overflow = "";
+              });
+            });
+          }
+
+          window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+              navBar.classList.add('scrolled');
+            } else {
+              navBar.classList.remove('scrolled');
+            }
+          });
+
+        }, 100);
+      })
+      .catch(err => console.error('Error loading components:', err));
+  </script>
+</body>
+</html>

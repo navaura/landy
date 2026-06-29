@@ -1,0 +1,84 @@
+User-agent: *
+Allow: /
+
+# ===== CORE ROUTES =====
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /apps
+Allow: /contact
+Allow: /privacy
+Allow: /terms
+Allow: /cookies
+Allow: /system-replacements
+Allow: /last-seen
+
+# ===== BLOG ROUTES (DYNAMIC) =====
+Allow: /blog.html
+Allow: /blog.html?slug=*
+Allow: /blog/
+
+# ===== LOCATION SEO =====
+Allow: /ai_company_in_kolkata/
+Allow: /ai_company_in_kolkata/software-company-kolkata
+
+# ===== SERVICES =====
+Allow: /our-services/
+Allow: /our-services/ai-automation
+Allow: /our-services/app-development
+Allow: /our-services/backend-api-development
+Allow: /our-services/cloud-deployment
+Allow: /our-services/custom-software
+Allow: /our-services/ecommerce-development
+Allow: /our-services/seo-services
+Allow: /our-services/ui-ux-design
+Allow: /our-services/web-development
+
+# ===== INTERNAL FILES =====
+Disallow: /our-services/STRUCTURE.md
+
+# ===== MEDIA CONTROL =====
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+
+Disallow: /*.png$
+Disallow: /*.gif$
+Disallow: /*.svg$
+Disallow: /*.mp4$
+Disallow: /*.mp3$
+
+# ===== NON SEO FILES =====
+Disallow: /chatui.js
+Disallow: /nav.html
+Disallow: /generate-sitemap.js
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.github/
+
+# ===== BOTS =====
+User-agent: Googlebot
+Allow: /
+Allow: /blog.html
+Allow: /blog.html?slug=*
+
+User-agent: Bingbot
+Allow: /
+Allow: /blog.html
+Allow: /blog.html?slug=*
+
+User-agent: GPTBot
+Allow: /
+Allow: /blog.html
+Allow: /blog.html?slug=*
+
+User-agent: CCBot
+Allow: /
+Allow: /blog.html
+Allow: /blog.html?slug=*
+
+# ===== CRAWL RATE =====
+Crawl-delay: 1
+
+# ===== SITEMAP (AUTO-UPDATED) =====
+Sitemap: https://navaura.in/sitemap.xml
