@@ -530,33 +530,34 @@ class NavauraChatbot {
       }
 
       /* Mobile Responsive */
-      @media (max-width: 768px) {
-        .navaura-chat {
-          bottom: 0;
-          right: 0;
-          left: 0;
-          z-index: 9999999;
-        }
+@media (max-width: 768px) {
+  .navaura-chat {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999999;
+  }
 
-        .navaura-chat-window {
-          width: 100%;
-          height: 100vh;
-          height: 100dvh; /* Dynamic viewport height for better mobile support */
-          border: none;
-          border-radius: 0;
-          bottom: 0;
-          right: 0;
-          transform: translateY(100vh);
-          max-height: -webkit-fill-available;
-        }
+  .navaura-chat-window {
+    width: 100%;
+    height: 75vh;
+    height: 75dvh;
+    max-height: 600px;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px 16px 0 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(100%);
+  }
 
-        .navaura-chat-window.open {
-          transform: translateY(0);
-          position: fixed;
-          top: 0;
-          left: 0;
-        }
-
+  .navaura-chat-window.open {
+    transform: translateY(0);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: auto;
+  }
         .navaura-chat-header {
           padding: max(1.5rem, env(safe-area-inset-top) + 1rem) 1.5rem 1.5rem 1.5rem;
           position: sticky;
