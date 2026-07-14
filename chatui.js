@@ -546,17 +546,17 @@ class NavauraChatbot {
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px 16px 0 0;
-    bottom: 0;
-    right: 0;
-    transform: translateY(100%);
-  }
-
-  .navaura-chat-window.open {
-    transform: translateY(0);
     position: fixed;
     bottom: 0;
     left: 0;
-    top: auto;
+    right: 0;
+    transform: translateY(100%) !important;
+    opacity: 1;
+  }
+
+  .navaura-chat-window.open {
+    transform: translateY(0) !important;
+    display: flex;
   }
         .navaura-chat-header {
           padding: max(1.5rem, env(safe-area-inset-top) + 1rem) 1.5rem 1.5rem 1.5rem;
