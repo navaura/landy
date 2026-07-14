@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Service - NAVAURA ARCTIQ</title>
   <meta name="description" content="Terms of Service for Navaura Arctiq - Legal terms and conditions for using our services.">
-  
+
   <!-- SEO Meta Tags -->
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://navaura.in/company/terms.html">
@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <script src="/chatui.js"></script>
-  
+
   <style>
     :root {
       --bg: #030303;
@@ -27,13 +27,7 @@
       --font-main: 'Manrope', sans-serif;
       --font-mono: 'Space Mono', monospace;
     }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       background-color: var(--bg);
       color: var(--fg);
@@ -42,167 +36,44 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
-
-    /* --- BACKGROUND GRID --- */
     .bg-grid {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: 
-        linear-gradient(var(--border) 1px, transparent 1px),
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background-image: linear-gradient(var(--border) 1px, transparent 1px),
         linear-gradient(90deg, var(--border) 1px, transparent 1px);
-      background-size: 100px 100px;
-      opacity: 0.05;
-      pointer-events: none;
-      z-index: 0;
+      background-size: 100px 100px; opacity: 0.05; pointer-events: none; z-index: 0;
     }
-
-    /* --- LAYOUT --- */
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 5%;
-      position: relative;
-      z-index: 2;
-    }
-
-    /* --- HERO --- */
-    .page-hero {
-      min-height: 50vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding-top: 10vh;
-      position: relative;
-      z-index: 1;
-    }
-
-    .page-hero h1 {
-      font-size: clamp(3rem, 7vw, 5rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 0.95;
-    }
-
-    /* --- LEGAL CONTENT --- */
-    .legal-content {
-      padding: 8rem 0;
-      position: relative;
-      z-index: 1;
-    }
-
-    .mono-label {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--dim);
-      display: block;
-      margin-bottom: 3rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .legal-content h2 {
-      font-size: 2rem;
-      font-weight: 600;
-      margin: 4rem 0 1.5rem 0;
-      letter-spacing: -0.02em;
-      border-left: 2px solid var(--fg);
-      padding-left: 1.5rem;
-    }
-
-    .legal-content h3 {
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin: 2.5rem 0 1rem 0;
-      color: var(--fg);
-    }
-
-    .legal-content p {
-      font-size: 1rem;
-      color: var(--dim);
-      margin-bottom: 1.5rem;
-      line-height: 1.8;
-    }
-
-    .legal-content ul {
-      margin: 1.5rem 0 1.5rem 2rem;
-      color: var(--dim);
-      line-height: 1.8;
-    }
-
-    .legal-content li {
-      margin-bottom: 1rem;
-      line-height: 1.8;
-    }
-
-    .legal-content strong {
-      color: var(--fg);
-      font-weight: 600;
-    }
-
-    .contact-box {
-      padding: 2.5rem;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid var(--border);
-      margin: 4rem 0;
-    }
-
-    .contact-box h3 {
-      margin-top: 0;
-      font-size: 1.3rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .contact-box p {
-      margin-bottom: 0.5rem;
-    }
-
-    .contact-box a {
-      color: var(--fg);
-      text-decoration: none;
-      border-bottom: 1px solid var(--border);
-      transition: border-color 0.3s ease;
-    }
-
-    .contact-box a:hover {
-      border-color: var(--fg);
-    }
-
-    .footer-note {
-      margin-top: 4rem;
-      padding-top: 3rem;
-      border-top: 1px solid var(--border);
-      font-size: 0.95rem;
-      color: var(--dim);
-    }
-
-    /* --- ANIMATIONS --- */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 5%; position: relative; z-index: 2; }
+    .page-hero { min-height: 50vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 10vh; position: relative; z-index: 1; }
+    .page-hero h1 { font-size: clamp(3rem, 7vw, 5rem); font-weight: 800; letter-spacing: -0.03em; line-height: 0.95; }
+    .legal-content { padding: 8rem 0; position: relative; z-index: 1; }
+    .mono-label { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--dim); display: block; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    .legal-content h2 { font-size: 2rem; font-weight: 600; margin: 4rem 0 1.5rem 0; letter-spacing: -0.02em; border-left: 2px solid var(--fg); padding-left: 1.5rem; }
+    .legal-content h3 { font-size: 1.3rem; font-weight: 600; margin: 2.5rem 0 1rem 0; color: var(--fg); }
+    .legal-content p { font-size: 1rem; color: var(--dim); margin-bottom: 1.5rem; line-height: 1.8; }
+    .legal-content ul { margin: 1.5rem 0 1.5rem 2rem; color: var(--dim); line-height: 1.8; }
+    .legal-content li { margin-bottom: 1rem; line-height: 1.8; }
+    .legal-content strong { color: var(--fg); font-weight: 600; }
+    .toc { padding: 2rem; background: rgba(255,255,255,0.02); border: 1px solid var(--border); margin: 3rem 0; columns: 2; column-gap: 2rem; }
+    .toc a { color: var(--dim); text-decoration: none; font-size: 0.9rem; display: block; padding: 0.3rem 0; break-inside: avoid; }
+    .toc a:hover { color: var(--fg); }
+    .warning-box { padding: 2rem; background: rgba(255, 60, 60, 0.05); border: 1px solid rgba(255,60,60,0.3); margin: 3rem 0; }
+    .warning-box p { color: rgba(255,255,255,0.7); margin-bottom: 0; }
+    .contact-box { padding: 2.5rem; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); margin: 4rem 0; }
+    .contact-box h3 { margin-top: 0; font-size: 1.3rem; margin-bottom: 1.5rem; }
+    .contact-box p { margin-bottom: 0.5rem; }
+    .contact-box a { color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--border); transition: border-color 0.3s ease; }
+    .contact-box a:hover { border-color: var(--fg); }
+    .footer-note { margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border); font-size: 0.95rem; color: var(--dim); }
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    @media (max-width: 700px) { .toc { columns: 1; } }
   </style>
 </head>
 <body>
 
-  <!-- Background Grid -->
   <div class="bg-grid"></div>
-
-  <!-- Navigation Placeholder -->
   <div id="navigation-placeholder"></div>
 
-  <!-- HERO -->
   <section class="page-hero">
     <div class="container">
       <div class="reveal">
@@ -211,342 +82,260 @@
     </div>
   </section>
 
-  <!-- LEGAL CONTENT -->
   <section class="legal-content">
     <div class="container">
-      <p class="mono-label reveal"><strong>LAST UPDATED:</strong> JANUARY 1, 2026</p>
+      <p class="mono-label reveal"><strong>LAST UPDATED:</strong> JULY 15, 2026 &nbsp;|&nbsp; <strong>EFFECTIVE FOR ALL PAST, PRESENT &amp; FUTURE ENGAGEMENTS</strong></p>
 
       <div class="reveal">
-        <p>Welcome to Navaura Arctiq. These Terms of Service ("Terms") govern your use of our website and services. By accessing or using our services, you agree to be bound by these Terms. If you do not agree with any part of these Terms, you may not use our services.</p>
+        <p>These Terms of Service ("Terms," "Agreement") govern all use of the website, software, SaaS platforms, AI systems, APIs, applications, hardware integrations, and consulting/development services (collectively, "Services") provided by <strong>Navaura Arctiq</strong> (CIN: U62099WB2025OPC275665), a company incorporated in India, with its registered office in Kolkata, West Bengal, India ("Company," "we," "us," "our").</p>
+        <p><strong>By accessing the Website, engaging the Services, making any payment, signing any Statement of Work ("SOW"), or continuing to use any Deliverable, you ("Client," "you," "your") agree to be bound by these Terms in full.</strong> If you do not agree, you must immediately cease all use of the Services and Deliverables.</p>
       </div>
 
-      <div class="reveal">
+      <div class="warning-box reveal">
+        <p><strong>MASTER OVERRIDE CLAUSE.</strong> These Terms constitute the sole and entire governing agreement between the Company and any Client, and expressly supersede, replace, and override any and all prior verbal agreements, email threads, WhatsApp/chat approvals, informal quotes, proposals, or previously signed contracts/SOWs — for <strong>every past, current, and future project or engagement</strong> — to the maximum extent permitted by applicable law, except where a separately executed written agreement, signed after the date above by an authorized representative of the Company, expressly and specifically states that it overrides these Terms. Continued use of any Deliverable, platform, or Service after the date above constitutes binding acceptance of these Terms by the Client, including for legacy/completed projects still in use.</p>
+      </div>
+
+      <div class="toc reveal">
+        <a href="#s1">1. Definitions</a>
+        <a href="#s2">2. Acceptance &amp; Eligibility</a>
+        <a href="#s3">3. Scope of Services</a>
+        <a href="#s4">4. Account &amp; Client Responsibilities</a>
+        <a href="#s5">5. Acceptable Use &amp; Prohibited Activities</a>
+        <a href="#s6">6. AI Services Disclaimer</a>
+        <a href="#s7">7. Software, SaaS &amp; Licensing</a>
+        <a href="#s8">8. Intellectual Property</a>
+        <a href="#s9">9. Confidentiality</a>
+        <a href="#s10">10. Payment Terms</a>
+        <a href="#s11">11. Project Delivery &amp; Delays</a>
+        <a href="#s12">12. Data, Hosting &amp; Security</a>
+        <a href="#s13">13. Suspension &amp; Termination</a>
+        <a href="#s14">14. Warranty Disclaimer</a>
+        <a href="#s15">15. Limitation of Liability</a>
+        <a href="#s16">16. Indemnification</a>
+        <a href="#s17">17. Compliance, Export &amp; Sanctions</a>
+        <a href="#s18">18. India-Specific Terms</a>
+        <a href="#s19">19. EU / UK / GDPR Terms</a>
+        <a href="#s20">20. US-Specific Terms</a>
+        <a href="#s21">21. Global / Rest-of-World Users</a>
+        <a href="#s22">22. Electronic Communications &amp; Signatures</a>
+        <a href="#s23">23. Dispute Resolution</a>
+        <a href="#s24">24. Client Misuse &amp; Anti-Circumvention</a>
+        <a href="#s25">25. General Provisions</a>
+        <a href="#s26">26. Contact</a>
+      </div>
+
+      <div class="reveal" id="s1">
         <h2>1. Definitions</h2>
         <ul>
-          <li><strong>"Company," "we," "us," or "our"</strong> refers to Navaura Arctiq (CIN: U62099WB2025OPC275665)</li>
-          <li><strong>"Client," "you," or "your"</strong> refers to the individual or entity using our services</li>
-          <li><strong>"Services"</strong> refers to all software development, consulting, and related services provided by us</li>
-          <li><strong>"Website"</strong> refers to navaura.in and all associated subdomains</li>
-          <li><strong>"Deliverables"</strong> refers to the work products, code, designs, and documentation provided as part of our services</li>
+          <li><strong>"Company"</strong> — Navaura Arctiq (CIN: U62099WB2025OPC275665) and its affiliates, subsidiaries, brands (including ARCTIQ and other product lines), officers, employees, and subcontractors.</li>
+          <li><strong>"Client"</strong> — any individual, business, organization, or agent engaging the Services, whether under a signed SOW, verbal agreement, purchase order, or by conduct (e.g. payment or use of a Deliverable).</li>
+          <li><strong>"Services"</strong> — all software development, SaaS, AI/ML systems, consulting, hosting, hardware/firmware integration, design, and related services.</li>
+          <li><strong>"Deliverables"</strong> — code, applications, models, prompts, designs, documentation, infrastructure configurations, and any other work product.</li>
+          <li><strong>"AI Output"</strong> — any content, code, prediction, or recommendation generated in whole or in part by an AI/ML model as part of the Services.</li>
+          <li><strong>"Personal Data"</strong> — has the meaning given under applicable data protection law (DPDP Act 2023 in India, GDPR in the EU/UK, and applicable US state privacy laws).</li>
         </ul>
       </div>
 
-      <div class="reveal">
-        <h2>2. Service Agreement</h2>
-        <h3>2.1 Engagement</h3>
-        <p>When you engage our services, you agree to:</p>
-        <ul>
-          <li>Provide accurate and complete information</li>
-          <li>Cooperate with us in a timely manner</li>
-          <li>Provide necessary access, materials, and feedback</li>
-          <li>Pay all fees as outlined in your service agreement</li>
-        </ul>
-
-        <h3>2.2 Service Scope</h3>
-        <p>The specific scope of services will be outlined in a separate Statement of Work (SOW) or Service Agreement. Any work outside the agreed scope may result in additional charges.</p>
+      <div class="reveal" id="s2">
+        <h2>2. Acceptance &amp; Eligibility</h2>
+        <p>You must be at least 18 years old, or the age of majority in your jurisdiction, and have legal authority to bind the entity on whose behalf you act. Engagement of Services by any means — signed SOW, deposit payment, email confirmation, or continued use — constitutes full acceptance of these Terms. If you are entering into this Agreement on behalf of a company, you represent that you have authority to do so.</p>
       </div>
 
-      <div class="reveal">
-        <h2>3. Payment Terms</h2>
-        <h3>3.1 Fees</h3>
-        <p>All fees are specified in the Service Agreement or quote provided to you. Unless otherwise stated, fees are quoted in Indian Rupees (INR).</p>
-
-        <h3>3.2 Payment Schedule</h3>
-        <p>Standard payment terms are:</p>
-        <ul>
-          <li>30% deposit to commence work</li>
-          <li>40% upon mid-project milestone</li>
-          <li>30% upon project completion</li>
-        </ul>
-        <p>Custom payment schedules may be arranged for larger projects.</p>
-
-        <h3>3.3 Late Payments</h3>
-        <p>Payments not received within 15 days of the due date may result in:</p>
-        <ul>
-          <li>Suspension of work until payment is received</li>
-          <li>Interest charges of 1.5% per month on overdue amounts</li>
-          <li>Withholding of deliverables until full payment is received</li>
-        </ul>
-
-        <h3>3.4 Refunds</h3>
-        <p>Deposits and payments for completed work are non-refundable. For ongoing projects, refunds may be considered on a case-by-case basis, minus work already completed.</p>
+      <div class="reveal" id="s3">
+        <h2>3. Scope of Services</h2>
+        <p>The Company provides software, AI/ML, SaaS, cloud, hardware-integration, and consulting services. Specific scope for a given engagement is defined in the relevant SOW, quote, or written confirmation. Any request outside agreed scope is a <strong>Change Request</strong> and may incur additional fees and timeline adjustments at the Company's sole discretion. The Company reserves the right to modify, discontinue, or replace any Service, feature, API, or software component at any time where commercially, technically, or legally necessary, with reasonable notice where practicable.</p>
       </div>
 
-      <div class="reveal">
-        <h2>4. Intellectual Property Rights</h2>
-        <h3>4.1 Client Ownership</h3>
-        <p>Upon full payment, you own all custom code, designs, and deliverables created specifically for your project. This includes:</p>
-        <ul>
-          <li>Custom application code</li>
-          <li>Custom designs and graphics</li>
-          <li>Project-specific documentation</li>
-        </ul>
-
-        <h3>4.2 Our Retained Rights</h3>
-        <p>We retain ownership of:</p>
-        <ul>
-          <li>Pre-existing code libraries and frameworks</li>
-          <li>General methodologies and processes</li>
-          <li>Reusable components and tools</li>
-          <li>Open-source software used in the project</li>
-        </ul>
-
-        <h3>4.3 Third-Party Components</h3>
-        <p>Projects may include third-party software, libraries, or APIs subject to their own licenses. You are responsible for complying with these licenses.</p>
-
-        <h3>4.4 Portfolio Rights</h3>
-        <p>Unless otherwise agreed in writing, we reserve the right to:</p>
-        <ul>
-          <li>Display your project in our portfolio</li>
-          <li>Use it as a case study (with anonymization if requested)</li>
-          <li>Reference you as a client</li>
-        </ul>
+      <div class="reveal" id="s4">
+        <h2>4. Account &amp; Client Responsibilities</h2>
+        <p>Client is solely responsible for: (a) accuracy of information and materials provided; (b) timely feedback, approvals, and access needed to perform the Services; (c) all content, data, and prompts submitted to any AI system or platform; (d) maintaining confidentiality of credentials issued; (e) ensuring its own compliance with laws applicable to its business, industry, and jurisdiction (including privacy, consumer protection, advertising, financial, and AI-specific regulation); and (f) independently backing up its own data. The Company is not responsible for losses arising from Client's failure to meet these responsibilities.</p>
       </div>
 
-      <div class="reveal">
-        <h2>5. Confidentiality</h2>
-        <h3>5.1 Mutual Confidentiality</h3>
-        <p>Both parties agree to keep confidential all proprietary information shared during the engagement, including:</p>
+      <div class="reveal" id="s5">
+        <h2>5. Acceptable Use &amp; Prohibited Activities</h2>
+        <p>Client shall not, and shall not permit any third party to:</p>
         <ul>
-          <li>Business strategies and plans</li>
-          <li>Technical specifications</li>
-          <li>Financial information</li>
-          <li>Trade secrets</li>
+          <li>Use the Services or Deliverables for any unlawful, fraudulent, defamatory, or infringing purpose;</li>
+          <li>Reverse engineer, decompile, disassemble, scrape, clone, or attempt to extract source code, model weights, prompts, or training methodology;</li>
+          <li>Use Company technology, code, or AI systems to train, fine-tune, or build a competing product or service;</li>
+          <li>Resell, sublicense, white-label, or redistribute Deliverables or access without prior written consent;</li>
+          <li>Circumvent usage limits, licensing controls, authentication, or security mechanisms;</li>
+          <li>Use the Services to generate content that is illegal, harmful, infringing, or violates the rights of any third party;</li>
+          <li>Misrepresent the nature, ownership, or origin of Deliverables to end users, investors, or regulators;</li>
+          <li>Engage in chargeback fraud, payment reversal abuse, or misrepresentation of work performed.</li>
         </ul>
-
-        <h3>5.2 Exceptions</h3>
-        <p>Confidentiality obligations do not apply to information that:</p>
-        <ul>
-          <li>Is publicly available</li>
-          <li>Was known prior to disclosure</li>
-          <li>Is independently developed</li>
-          <li>Must be disclosed by law</li>
-        </ul>
+        <p>Violation of this Section entitles the Company to immediately suspend Services, withhold Deliverables, pursue full contractual damages, and — where applicable — pursue civil and criminal remedies available under Indian and international law.</p>
       </div>
 
-      <div class="reveal">
-        <h2>6. Warranties and Disclaimers</h2>
-        <h3>6.1 Our Warranties</h3>
-        <p>We warrant that:</p>
-        <ul>
-          <li>Services will be performed in a professional manner</li>
-          <li>Deliverables will substantially conform to specifications</li>
-          <li>We have the right to provide the services</li>
-          <li>Work will not infringe third-party intellectual property rights</li>
-        </ul>
-
-        <h3>6.2 Disclaimer</h3>
-        <p>Except as expressly stated, our services are provided "as is" without warranties of any kind, either express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
-
-        <h3>6.3 No Guarantee of Results</h3>
-        <p>We do not guarantee specific business results, traffic, sales, or rankings from our services. Success depends on many factors outside our control.</p>
+      <div class="reveal" id="s6">
+        <h2>6. AI Services Disclaimer</h2>
+        <p>Where Services include AI/ML systems, models, or AI-generated output ("AI Output"): (a) AI Output may be inaccurate, incomplete, biased, or unsuitable for a given purpose, and Client is solely responsible for independently reviewing and validating any AI Output before relying on or deploying it; (b) the Company makes no warranty regarding the accuracy, legality, or fitness of AI Output; (c) Client indemnifies the Company against claims arising from Client's deployment or use of AI Output, including claims of IP infringement, defamation, discrimination, or regulatory non-compliance; (d) the Company complies with applicable AI regulation (including the EU AI Act where in scope) only to the extent it acts as a developer of the underlying tooling — Client is independently responsible for its own compliance obligations as a deployer of AI systems built on the Deliverables.</p>
       </div>
 
-      <div class="reveal">
-        <h2>7. Limitation of Liability</h2>
-        <h3>7.1 Limitation</h3>
-        <p>To the maximum extent permitted by law, our total liability for any claims arising from our services shall not exceed the total fees paid by you for the specific service giving rise to the claim.</p>
-
-        <h3>7.2 Exclusions</h3>
-        <p>We shall not be liable for:</p>
-        <ul>
-          <li>Indirect, incidental, or consequential damages</li>
-          <li>Loss of profits, revenue, or data</li>
-          <li>Business interruption</li>
-          <li>Damages caused by third-party services or software</li>
-          <li>Issues arising from your misuse of deliverables</li>
-        </ul>
+      <div class="reveal" id="s7">
+        <h2>7. Software, SaaS &amp; Licensing</h2>
+        <p><strong>7.1 License Grant.</strong> Subject to full payment, Company grants Client a limited, non-exclusive, non-transferable license to use the Deliverables for Client's internal business purposes, unless a broader license (SaaS subscription, white-label, enterprise) is expressly agreed in writing.</p>
+        <p><strong>7.2 No Transfer Before Payment.</strong> No source code, repositories, credentials, design files, AI models/weights, prompts, infrastructure configuration, or deployment assets are transferred, unlocked, or made available until payment for the relevant milestone is received in full.</p>
+        <p><strong>7.3 Automatic License Termination.</strong> Any license granted automatically and immediately terminates, without notice, upon: non-payment, payment default, chargeback, material breach of these Terms, or use of Deliverables in a manner prohibited under Section 5. Upon termination, Client must immediately cease all use and, if requested, destroy or return all copies of the Deliverables.</p>
+        <p><strong>7.4 Trial &amp; Beta Services.</strong> Trial and beta features are provided "as-is," may be withdrawn at any time without liability, and are excluded from any warranty or SLA.</p>
       </div>
 
-      <div class="reveal">
-        <h2>8. Client Responsibilities</h2>
-        <h3>8.1 Content and Materials</h3>
-        <p>You are responsible for:</p>
-        <ul>
-          <li>Accuracy of content provided to us</li>
-          <li>Obtaining necessary rights and licenses for materials you provide</li>
-          <li>Ensuring content complies with applicable laws</li>
-          <li>Backup of your data and content</li>
-        </ul>
-
-        <h3>8.2 Third-Party Services</h3>
-        <p>You are responsible for:</p>
-        <ul>
-          <li>Obtaining and maintaining necessary third-party services (hosting, domains, etc.)</li>
-          <li>Paying for third-party service fees</li>
-          <li>Complying with third-party terms of service</li>
-        </ul>
+      <div class="reveal" id="s8">
+        <h2>8. Intellectual Property</h2>
+        <p><strong>8.1 Ownership Prior to Payment.</strong> All IP in the Deliverables remains the exclusive property of the Company until 100% of applicable fees are paid. No equitable, implied, or beneficial ownership passes to Client prior to full payment, regardless of possession or use.</p>
+        <p><strong>8.2 Client Ownership Post-Payment.</strong> Upon full and final payment, Client owns the custom, project-specific code and designs created exclusively for that project, excluding pre-existing and reusable Company IP described below.</p>
+        <p><strong>8.3 Company Retained Rights.</strong> The Company retains exclusive ownership, in perpetuity, of all pre-existing frameworks, libraries, internal tools, SDKs, APIs, AI models, prompts, methodologies, templates, automation systems, and know-how, whether created before, during, or after any engagement — including improvements made while working on Client's project — unless expressly assigned in a separate signed writing by an authorized Company representative.</p>
+        <p><strong>8.4 Trademark &amp; Copyright.</strong> "Navaura," "Navaura Arctiq," "ARCTIQ," associated logos, and product names are trademarks of the Company. No license to use Company trademarks is granted except as expressly agreed.</p>
+        <p><strong>8.5 Portfolio &amp; Marketing Rights.</strong> Unless Client opts out in writing, the Company may display completed projects in its portfolio, case studies, and marketing materials, with anonymization available on request.</p>
+        <p><strong>8.6 Open Source.</strong> Deliverables may include open-source components subject to their own licenses (MIT, Apache, GPL, etc.). Client is responsible for compliance with such licenses in its downstream use.</p>
       </div>
 
-      <div class="reveal">
-        <h2>9. Support and Maintenance</h2>
-        <h3>9.1 Warranty Period</h3>
-        <p>We provide bug fixes for critical issues for the period specified in your Service Agreement (typically 1-12 months).</p>
-
-        <h3>9.2 Post-Warranty Support</h3>
-        <p>After the warranty period, support and maintenance are available under separate agreements at our then-current rates.</p>
-
-        <h3>9.3 Exclusions</h3>
-        <p>Support does not cover:</p>
-        <ul>
-          <li>Issues caused by modifications made by you or third parties</li>
-          <li>Problems with third-party services or software</li>
-          <li>Feature requests or enhancements</li>
-          <li>User training or consultation</li>
-        </ul>
+      <div class="reveal" id="s9">
+        <h2>9. Confidentiality</h2>
+        <p>Each party agrees to protect the other's confidential information with the same degree of care it uses for its own confidential information, and not less than reasonable care. Confidentiality obligations survive termination of this Agreement <strong>indefinitely</strong> for trade secrets, and for <strong>five (5) years</strong> for other confidential information, except where a longer period is required by law. Exceptions apply to information that is public, independently developed, or required to be disclosed by law or valid legal process (with notice to the other party where legally permitted).</p>
       </div>
 
-      <div class="reveal">
-        <h2>10. Project Timelines</h2>
-        <h3>10.1 Estimates</h3>
-        <p>Project timelines are estimates based on the information available at the time. Actual timelines may vary due to:</p>
-        <ul>
-          <li>Scope changes or additions</li>
-          <li>Delays in client feedback or approvals</li>
-          <li>Technical complexities discovered during development</li>
-          <li>Third-party service issues</li>
-        </ul>
-
-        <h3>10.2 Client Delays</h3>
-        <p>If project delays are caused by client actions or inactions (e.g., late feedback, unavailability), we reserve the right to adjust timelines and may charge additional fees for extended project duration.</p>
+      <div class="reveal" id="s10">
+        <h2>10. Payment Terms</h2>
+        <p><strong>10.1 Fees &amp; Currency.</strong> Fees are as stated in the applicable quote/SOW. Domestic Indian invoices are in INR inclusive of applicable GST; international invoices may be quoted in USD/EUR/GBP and are exclusive of local taxes, which remain Client's responsibility.</p>
+        <p><strong>10.2 Standard Schedule.</strong> Unless otherwise agreed: 30% deposit to commence, 40% at mid-project milestone, 30% on completion, prior to final handover of Deliverables and credentials.</p>
+        <p><strong>10.3 Late Payment.</strong> Amounts unpaid after 15 days accrue interest at 1.5% per month (or the maximum permitted by law, whichever is lower), and entitle the Company to immediately suspend Services and withhold all Deliverables without liability.</p>
+        <p><strong>10.4 Chargebacks &amp; Disputes.</strong> Initiating a chargeback or payment reversal without first raising the issue with the Company in writing is treated as a material breach and fraud, entitling the Company to immediately revoke all licenses, pursue collection (including collection costs and legal fees), and pursue civil/criminal remedies.</p>
+        <p><strong>10.5 Refunds.</strong> Fees for completed work and deposits are non-refundable. Refunds for incomplete work, if any, are at the Company's sole discretion, less costs already incurred.</p>
       </div>
 
-      <div class="reveal">
-        <h2>11. Termination</h2>
-        <h3>11.1 Termination by Either Party</h3>
-        <p>Either party may terminate the engagement with 30 days written notice.</p>
-
-        <h3>11.2 Termination for Cause</h3>
-        <p>Either party may terminate immediately if the other party:</p>
-        <ul>
-          <li>Breaches these Terms materially</li>
-          <li>Becomes insolvent or bankrupt</li>
-          <li>Ceases business operations</li>
-        </ul>
-
-        <h3>11.3 Effect of Termination</h3>
-        <p>Upon termination:</p>
-        <ul>
-          <li>You must pay for all work completed to date</li>
-          <li>We will deliver work completed as of the termination date</li>
-          <li>Rights to deliverables vest only upon full payment</li>
-        </ul>
+      <div class="reveal" id="s11">
+        <h2>11. Project Delivery &amp; Delays</h2>
+        <p>Timelines are estimates. Delays caused by Client (late feedback, missing materials, unavailability, scope changes) extend timelines proportionally and may incur additional fees. Delivery is deemed accepted if Client does not raise written objection within 7 days of delivery.</p>
       </div>
 
-      <div class="reveal">
-        <h2>12. Indemnification</h2>
-        <p>You agree to indemnify and hold us harmless from any claims, damages, or expenses arising from:</p>
-        <ul>
-          <li>Your use of our deliverables</li>
-          <li>Content or materials you provide</li>
-          <li>Your breach of these Terms</li>
-          <li>Your violation of any laws or third-party rights</li>
-        </ul>
+      <div class="reveal" id="s12">
+        <h2>12. Data, Hosting &amp; Security</h2>
+        <p>The Company implements commercially reasonable security measures but does not guarantee absolute security, uptime, or freedom from breach. Client is responsible for maintaining independent backups. The Company disclaims liability for outages, data loss, or breaches caused by third-party hosting/cloud providers, Client's own systems, or factors outside the Company's reasonable control. Any vulnerability discovered should be responsibly disclosed to the Company before public disclosure.</p>
       </div>
 
-      <div class="reveal">
-        <h2>13. Force Majeure</h2>
-        <p>Neither party shall be liable for delays or failures in performance resulting from circumstances beyond reasonable control, including natural disasters, acts of government, war, terrorism, pandemics, labor disputes, or infrastructure failures.</p>
+      <div class="reveal" id="s13">
+        <h2>13. Suspension &amp; Termination</h2>
+        <p>The Company may suspend or terminate Services immediately, without liability, in cases of non-payment, suspected fraud, abuse, illegal use, or legal/regulatory risk. Either party may terminate for convenience with 30 days' written notice. Upon termination, Client pays for all work completed to date; rights to any Deliverable vest only upon full payment. Sections on IP, Confidentiality, Payment, Indemnification, Limitation of Liability, and Dispute Resolution survive termination.</p>
       </div>
 
-      <div class="reveal">
-        <h2>14. Dispute Resolution</h2>
-        <h3>14.1 Negotiation</h3>
-        <p>In the event of any dispute, parties agree to first attempt resolution through good-faith negotiation.</p>
-
-        <h3>14.2 Arbitration</h3>
-        <p>If negotiation fails, disputes shall be resolved through binding arbitration in Kolkata, West Bengal, India, in accordance with the Arbitration and Conciliation Act, 1996.</p>
-
-        <h3>14.3 Governing Law</h3>
-        <p>These Terms shall be governed by and construed in accordance with the laws of India, without regard to conflict of law principles.</p>
+      <div class="reveal" id="s14">
+        <h2>14. Warranty Disclaimer</h2>
+        <p>EXCEPT AS EXPRESSLY STATED, SERVICES AND DELIVERABLES ARE PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR UNINTERRUPTED/ERROR-FREE OPERATION. THE COMPANY DOES NOT GUARANTEE SPECIFIC BUSINESS OUTCOMES, REVENUE, TRAFFIC, OR RANKINGS.</p>
       </div>
 
-      <div class="reveal">
-        <h2>15. General Provisions</h2>
-        <h3>15.1 Entire Agreement</h3>
-        <p>These Terms, together with any Service Agreement or SOW, constitute the entire agreement between the parties.</p>
-
-        <h3>15.2 Amendments</h3>
-        <p>We may update these Terms from time to time. Continued use of our services after changes constitutes acceptance of the new Terms.</p>
-
-        <h3>15.3 Severability</h3>
-        <p>If any provision of these Terms is found to be unenforceable, the remaining provisions shall continue in full force and effect.</p>
-
-        <h3>15.4 Waiver</h3>
-        <p>Failure to enforce any right or provision does not constitute a waiver of that right or provision.</p>
-
-        <h3>15.5 Assignment</h3>
-        <p>You may not assign or transfer these Terms without our prior written consent. We may assign these Terms without restriction.</p>
-
-        <h3>15.6 Independent Contractors</h3>
-        <p>The parties are independent contractors. Nothing in these Terms creates an employment, partnership, or agency relationship.</p>
+      <div class="reveal" id="s15">
+        <h2>15. Limitation of Liability</h2>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW: (a) THE COMPANY'S TOTAL AGGREGATE LIABILITY FOR ANY CLAIM ARISING FROM THE SERVICES SHALL NOT EXCEED THE FEES ACTUALLY PAID BY CLIENT FOR THE SPECIFIC SERVICE GIVING RISE TO THE CLAIM IN THE 6 MONTHS PRECEDING THE CLAIM; (b) THE COMPANY IS NOT LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, LOSS OF PROFITS, REVENUE, DATA, OR BUSINESS INTERRUPTION, EVEN IF ADVISED OF THE POSSIBILITY; (c) THESE LIMITATIONS APPLY REGARDLESS OF THE LEGAL THEORY (CONTRACT, TORT, STRICT LIABILITY, OR OTHERWISE). Nothing in these Terms excludes liability that cannot be excluded under applicable law (e.g., for fraud or gross negligence, or consumer statutory rights that cannot be waived).</p>
       </div>
 
-      <div class="reveal">
-        <h2>16. Contact Information</h2>
-        <p>For questions about these Terms, please contact us at:</p>
+      <div class="reveal" id="s16">
+        <h2>16. Indemnification</h2>
+        <p>Client agrees to defend, indemnify, and hold harmless the Company, its officers, employees, and subcontractors from any third-party claim, loss, liability, damage, or expense (including reasonable legal fees) arising from or related to: (a) Client's use or misuse of the Services or Deliverables; (b) content, data, or prompts submitted by Client; (c) Client's breach of these Terms or violation of applicable law; (d) Client's deployment of AI Output; and (e) any dispute between Client and its own end users or customers. This obligation survives termination of this Agreement.</p>
+      </div>
 
+      <div class="reveal" id="s17">
+        <h2>17. Compliance, Export &amp; Sanctions</h2>
+        <p>Client represents it is not located in, or a national of, any country subject to comprehensive sanctions, and is not listed on any restricted/denied party list (including OFAC SDN, EU consolidated sanctions list, or equivalent). Client shall comply with all applicable export control, anti-bribery (including the Prevention of Money Laundering Act and the U.S. FCPA where applicable), and anti-money-laundering laws. The Company may respond to valid governmental or judicial requests for information as required by law.</p>
+      </div>
+
+      <div class="reveal" id="s18">
+        <h2>18. India-Specific Terms</h2>
+        <p>These Terms are governed primarily by Indian law, including the Indian Contract Act 1872, the Information Technology Act 2000, and the Digital Personal Data Protection Act 2023 ("DPDP Act"). The Company acts as a Data Fiduciary/Data Processor as applicable under the DPDP Act with respect to Personal Data processed on Client's behalf, and Client, where it collects Personal Data of its own end users using the Deliverables, acts as an independent Data Fiduciary responsible for its own DPDP Act compliance. GST is charged where applicable on domestic invoices per the CGST/SGST/IGST Acts.</p>
+      </div>
+
+      <div class="reveal" id="s19">
+        <h2>19. EU / UK / GDPR Terms</h2>
+        <p>For Clients or end users located in the EU/EEA or UK, the Company processes Personal Data in accordance with the EU General Data Protection Regulation (GDPR) and UK GDPR, as applicable. Where the Company processes Personal Data on Client's behalf as a processor, the parties agree to enter into a Data Processing Agreement incorporating Standard Contractual Clauses for any international data transfer. Client is responsible for establishing its own lawful basis for processing and for its own compliance with the EU AI Act where the Deliverables are deployed as or within an AI system in scope of that Regulation. EU/UK consumers retain statutory rights that cannot be limited by this Agreement, including rights under applicable consumer protection law.</p>
+      </div>
+
+      <div class="reveal" id="s20">
+        <h2>20. US-Specific Terms</h2>
+        <p>For Clients in the United States, nothing in these Terms limits rights or remedies available under applicable US federal or state law that cannot be waived by contract. Where applicable, the Company will process Personal Data of US residents in a manner consistent with applicable US state privacy laws (e.g., CCPA/CPRA and similar state statutes). Any arbitration provision in Section 23 for US Clients is governed, where applicable, by the Federal Arbitration Act, and any class-action/class-arbitration waiver applies only to the extent enforceable under applicable law.</p>
+      </div>
+
+      <div class="reveal" id="s21">
+        <h2>21. Global / Rest-of-World Users</h2>
+        <p>For Clients outside India, the EU/UK, and the US, these Terms apply as the primary governing agreement, subject to any mandatory local consumer-protection or data-protection law of the Client's jurisdiction that cannot be contractually overridden, which shall apply solely to the extent required and only insofar as it conflicts with these Terms.</p>
+      </div>
+
+      <div class="reveal" id="s22">
+        <h2>22. Electronic Communications &amp; Signatures</h2>
+        <p>Client agrees that approvals, sign-offs, and instructions given via email, WhatsApp, or other electronic messaging constitute valid, binding acceptance and written approval for the purposes of this Agreement and applicable law (including the IT Act 2000 in India and the ESIGN Act/UETA in the US, and eIDAS in the EU). Such communications, along with associated timestamps and logs, are admissible as evidence between the parties.</p>
+      </div>
+
+      <div class="reveal" id="s23">
+        <h2>23. Dispute Resolution</h2>
+        <p><strong>23.1 Negotiation.</strong> Parties shall first attempt good-faith resolution through direct negotiation.</p>
+        <p><strong>23.2 Arbitration.</strong> Failing resolution within 30 days, disputes shall be referred to binding arbitration under the Arbitration and Conciliation Act, 1996, with a sole arbitrator appointed by the Company, seated in Kolkata, West Bengal, India, conducted in English. The arbitration award shall be final and binding.</p>
+        <p><strong>23.3 Governing Law &amp; Jurisdiction.</strong> These Terms are governed by the laws of India. Subject to Section 23.2, courts in Kolkata, West Bengal shall have exclusive jurisdiction, without prejudice to the Company's right to seek interim/injunctive relief in any court of competent jurisdiction, including in the Client's home jurisdiction, to protect its IP or confidential information.</p>
+        <p><strong>23.4 Class Action Waiver.</strong> To the extent permitted by applicable law, disputes shall be resolved on an individual basis only, and Client waives any right to participate in a class, collective, or representative proceeding.</p>
+      </div>
+
+      <div class="reveal" id="s24">
+        <h2>24. Client Misuse &amp; Anti-Circumvention</h2>
+        <p>If Client is found to have misused Deliverables, engaged in fraud, misrepresented facts to the Company, infringed Company IP, breached confidentiality, or violated Section 5, the Company reserves the right, in addition to all other remedies, to: immediately terminate all licenses and access; pursue full recovery of fees, damages, and legal costs; publicly correct any misrepresentation regarding the engagement to the extent necessary to protect the Company's reputation, consistent with applicable law; and pursue civil and criminal action available under Indian law (including under the IT Act 2000 and Indian Penal Code/Bharatiya Nyaya Sanhita provisions on cheating, fraud, and criminal breach of trust) and the law of any other jurisdiction with competent authority over the Client.</p>
+      </div>
+
+      <div class="reveal" id="s25">
+        <h2>25. General Provisions</h2>
+        <p><strong>25.1 Entire Agreement.</strong> These Terms, together with any applicable SOW, constitute the entire agreement and supersede all prior agreements as described in the Master Override Clause above.</p>
+        <p><strong>25.2 Order of Precedence.</strong> In case of conflict, a signed SOW's project-specific terms prevail only where they expressly state they override these Terms; otherwise these Terms prevail.</p>
+        <p><strong>25.3 Amendments.</strong> The Company may update these Terms at any time by posting the revised version with a new "Last Updated" date. Continued use constitutes acceptance.</p>
+        <p><strong>25.4 Severability.</strong> If any provision is held unenforceable, the remainder remains in full force and effect.</p>
+        <p><strong>25.5 No Waiver.</strong> Failure to enforce any provision is not a waiver of that or any other provision.</p>
+        <p><strong>25.6 Assignment.</strong> Client may not assign this Agreement without the Company's prior written consent. The Company may assign or subcontract freely.</p>
+        <p><strong>25.7 Relationship of Parties.</strong> The parties are independent contractors; nothing herein creates a partnership, joint venture, or employment relationship.</p>
+        <p><strong>25.8 Force Majeure.</strong> Neither party is liable for delay or failure due to events beyond its reasonable control (natural disaster, war, pandemic, government action, infrastructure/internet failure, etc.).</p>
+        <p><strong>25.9 Language.</strong> These Terms are drafted in English, which shall govern in case of any translation discrepancy.</p>
+        <p><strong>25.10 Survival.</strong> Sections relating to IP, Confidentiality, Payment obligations, Indemnification, Limitation of Liability, Dispute Resolution, and this Section survive termination or expiry of this Agreement indefinitely, or for the maximum period permitted by law.</p>
+      </div>
+
+      <div class="reveal" id="s26">
+        <h2>26. Contact Information</h2>
+        <p>For questions about these Terms, please contact:</p>
         <div class="contact-box">
           <h3>Navaura Arctiq</h3>
           <p>
             Email: <a href="mailto:legal@navaura.in">legal@navaura.in</a><br>
-            Phone: <a href="tel:+919876543210">+91 98765 43210</a><br>
             Address: Kolkata, West Bengal, India<br>
             CIN: U62099WB2025OPC275665
           </p>
         </div>
-
-        <p class="footer-note">By using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</p>
+        <p class="footer-note">These Terms are intended to provide broad, enforceable protection under Indian law while accounting for EU, UK, US, and global compliance frameworks. Enforceability of specific clauses (e.g., liability caps, arbitration, class-action waivers) can vary by jurisdiction and is ultimately determined by local courts/regulators. Independent legal counsel review is strongly recommended before relying on this document in an actual dispute. By using our Services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service, and that these Terms override all prior agreements for all past, present, and future engagements as set out above.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer Placeholder -->
   <div id="footer-placeholder"></div>
 
-  <!-- Load Components & Scripts -->
   <script>
-    // Reveal Animation Observer
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px"
-    };
-
+    const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('active');
       });
     }, observerOptions);
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    document.querySelectorAll('.reveal').forEach(el => {
-      observer.observe(el);
-    });
-
-    // Load Navigation and Initialize Interactions
     fetch('/nav.html')
       .then(response => response.text())
       .then(data => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(data, 'text/html');
-
         const nav = doc.querySelector('nav');
         const navOverlay = doc.querySelector('.nav-overlay');
         const footer = doc.querySelector('footer');
         const styles = doc.querySelector('style');
-
         if (styles) document.head.appendChild(styles);
         if (nav) document.getElementById('navigation-placeholder').appendChild(nav);
         if (navOverlay) document.getElementById('navigation-placeholder').appendChild(navOverlay);
         if (footer) document.getElementById('footer-placeholder').appendChild(footer);
-
         setTimeout(() => {
           const menuBtn = document.getElementById('menuToggle');
           const overlay = document.getElementById('navOverlay');
           const navBar = document.getElementById('mainNav');
           const navLinks = document.querySelectorAll('.nav-links a, .nav-links button');
-
           if (menuBtn && overlay) {
             menuBtn.addEventListener('click', () => {
               overlay.classList.toggle('active');
@@ -558,7 +347,6 @@
                 document.body.style.overflow = "";
               }
             });
-
             navLinks.forEach(link => {
               link.addEventListener('click', () => {
                 overlay.classList.remove('active');
@@ -567,15 +355,10 @@
               });
             });
           }
-
           window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-              navBar.classList.add('scrolled');
-            } else {
-              navBar.classList.remove('scrolled');
-            }
+            if (window.scrollY > 50) navBar.classList.add('scrolled');
+            else navBar.classList.remove('scrolled');
           });
-
         }, 100);
       })
       .catch(err => console.error('Error loading components:', err));
